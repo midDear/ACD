@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="register" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect fillColor="0xa8a8a8" left="-2" right="2" top="0" bottom="0" locked="true"/>
+	<e:Label id="login" text="has account go login" y="559.19" bold="true" textColor="0xC11111" size="24" horizontalCenter="0.5" touchEnabled="true"/>
+	<e:Label text="ACD  register" y="82" bold="true" horizontalCenter="-2" textColor="0xc11111"/>
+	<e:Label text="国家" x="112" y="253.15" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="253.15" anchorOffsetX="0"/>
+	<e:Label text="姓名" x="112" y="198" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="198" anchorOffsetX="0"/>
+	<e:Label text="手机号" x="112" y="308.3" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="308.3" anchorOffsetX="0"/>
+	<e:Label text="账号" x="112" y="363.45" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="363.45" anchorOffsetX="0"/>
+	<e:Label text="邀请码" x="112" y="418.6" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="418.6" anchorOffsetX="0"/>
+	<e:Label text="密码" x="112" y="468.02" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="468.02" anchorOffsetX="0" displayAsPassword="true"/>
+	<e:Label text="确认密码" x="112" y="509.84" textColor="0x000000" size="22"/>
+	<e:TextInput width="320" height="26" x="227" y="509.84" anchorOffsetX="0"/>
+	<e:Button label="register" y="618.75" horizontalCenter="0"/>
+</e:Skin>
