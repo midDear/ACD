@@ -52,5 +52,11 @@ declare module skins{
 }
 declare class login extends eui.Skin{
 }
+declare class Me extends eui.Skin{
+}
+declare class NavConpane extends eui.Skin{
+}
 declare class register extends eui.Skin{
+}
+declare class Title extends eui.Skin{
 }

@@ -38,7 +38,7 @@ class Main extends eui.UILayer {
         })
 
         egret.lifecycle.onPause = () => {
-            egret.ticker.pause();
+            // egret.ticker.pause();
         }
 
         egret.lifecycle.onResume = () => {
@@ -99,50 +99,19 @@ class Main extends eui.UILayer {
      */
     protected createGameScene(): void {
         console.log("createGameScene");
+
+        this.addChild(new MeView());
         this.addLogin();
+
+
     }
 
 
     private addLogin(): void {
-
-        var ui: eui.Component = new eui.Component();
-
-
-        setTimeout(() => {
-            console.log("COMPLETE-addLogin");
-            ui.skinName = "resource/eui/login.exml";
-            this.addChild(ui);
-
-            ui["register"].addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-
-                this.removeChild(ui);
-
-                this.addRegister();
-
-            }, this);
-        }, 1500);
+        this.addChild(new LoginView());
 
     }
 
-    private addRegister(): void {
-        var ui: eui.Component = new eui.Component();
-        ui.skinName = "resource/eui/register.exml";
-        this.addChild(ui);
 
-        setTimeout( () => {
-
-
-
-            ui["login"].addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-
-                this.removeChild(ui);
-
-                this.addLogin();
-
-            }, this);
-
-        }, 1500)
-
-    }
 
 }

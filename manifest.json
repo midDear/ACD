@@ -10,10 +10,33 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
-		"bin-debug/AssetAdapter.js",
-		"bin-debug/LoadingUI.js",
-		"bin-debug/Main.js",
+		"bin-debug/eventControl/Dictionary.js",
+		"bin-debug/view/BasicView.js",
+		"bin-debug/utils/MoveControl.js",
 		"bin-debug/Platform.js",
-		"bin-debug/ThemeAdapter.js"
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/data/Global.js",
+		"bin-debug/eventControl/BC.js",
+		"bin-debug/eventControl/DelegateUtil.js",
+		"bin-debug/eventControl/Demo.js",
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/libs/RequestMethod.js",
+		"bin-debug/utils/Config.js",
+		"bin-debug/utils/displayobjectBlink.js",
+		"bin-debug/utils/EffectUtils.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/utils/MovieclipMethod.js",
+		"bin-debug/utils/MyBitmap.js",
+		"bin-debug/utils/MyTimer.js",
+		"bin-debug/utils/OBJ.js",
+		"bin-debug/utils/shapeMethod.js",
+		"bin-debug/utils/stringMethod.js",
+		"bin-debug/utils/T.js",
+		"bin-debug/utils/TweenMe.js",
+		"bin-debug/utils/upfile.js",
+		"bin-debug/Main.js",
+		"bin-debug/view/LoginView.js",
+		"bin-debug/view/MeView.js",
+		"bin-debug/view/RegisterView.js"
 	]
 }

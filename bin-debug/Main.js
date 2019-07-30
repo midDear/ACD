@@ -82,7 +82,7 @@ var Main = (function (_super) {
             // custom lifecycle plugin
         });
         egret.lifecycle.onPause = function () {
-            egret.ticker.pause();
+            // egret.ticker.pause();
         };
         egret.lifecycle.onResume = function () {
             egret.ticker.resume();
@@ -163,32 +163,11 @@ var Main = (function (_super) {
      */
     Main.prototype.createGameScene = function () {
         console.log("createGameScene");
+        this.addChild(new MeView());
         this.addLogin();
     };
     Main.prototype.addLogin = function () {
-        var _this = this;
-        var ui = new eui.Component();
-        setTimeout(function () {
-            console.log("COMPLETE-addLogin");
-            ui.skinName = "resource/eui/login.exml";
-            _this.addChild(ui);
-            ui["register"].addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-                _this.removeChild(ui);
-                _this.addRegister();
-            }, _this);
-        }, 1500);
-    };
-    Main.prototype.addRegister = function () {
-        var _this = this;
-        var ui = new eui.Component();
-        ui.skinName = "resource/eui/register.exml";
-        this.addChild(ui);
-        setTimeout(function () {
-            ui["login"].addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-                _this.removeChild(ui);
-                _this.addLogin();
-            }, _this);
-        }, 1500);
+        this.addChild(new LoginView());
     };
     return Main;
 }(eui.UILayer));

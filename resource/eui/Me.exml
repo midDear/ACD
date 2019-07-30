@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Me" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xfcdd00" locked="true"/>
+	<e:Rect width="50" height="50" x="22" y="20" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="22"/>
+	<e:Group x="436" y="258">
+		<e:Rect width="120" height="150" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="50" ellipseHeight="50" fillColor="0x050200"/>
+		<e:Label text="MY\nACD\nURT" x="42" y="16" anchorOffsetX="0" width="84" anchorOffsetY="0" height="114" textColor="0xEDA802" verticalAlign="middle" textAlign="left" size="26" bold="true" lineSpacing="5"/>
+	</e:Group>
+	<e:Rect width="340" height="200" x="78" y="260" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="50" fillColor="0xf48d00" ellipseHeight="50"/>
+	<e:Rect width="340" height="200" x="130" y="240" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="50" ellipseHeight="50" fillColor="0xffffff" strokeAlpha="0.3" strokeColor="0xfc9b0a" strokeWeight="3"/>
+	<e:Label id="acd" text="1.068" x="158" y="314" anchorOffsetX="0" width="278" anchorOffsetY="0" height="70" textColor="0xeda802" verticalAlign="middle" textAlign="center" size="80" bold="true"/>
+	<e:Rect id="arc" width="280" height="280" y="568" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="280" ellipseHeight="280" strokeWeight="10" strokeColor="0xffffff" fillAlpha="0" horizontalCenter="0"/>
+	<e:Label id="time" text="12:56:23" y="668" anchorOffsetX="0" width="278" anchorOffsetY="0" height="70" textColor="0xEDA802" verticalAlign="middle" textAlign="center" size="52" horizontalCenter="0"/>
+</e:Skin>

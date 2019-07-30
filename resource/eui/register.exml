@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="register" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect fillColor="0xa8a8a8" left="-2" right="2" top="0" bottom="0" locked="true"/>
-	<e:Label id="login" text="has account go login" y="559.19" bold="true" textColor="0xC11111" size="24" horizontalCenter="0.5" touchEnabled="true"/>
-	<e:Label text="ACD  register" y="82" bold="true" horizontalCenter="-2" textColor="0xc11111"/>
-	<e:Label text="国家" x="112" y="253.15" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="253.15" anchorOffsetX="0"/>
-	<e:Label text="姓名" x="112" y="198" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="198" anchorOffsetX="0"/>
-	<e:Label text="手机号" x="112" y="308.3" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="308.3" anchorOffsetX="0"/>
-	<e:Label text="账号" x="112" y="363.45" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="363.45" anchorOffsetX="0"/>
-	<e:Label text="邀请码" x="112" y="418.6" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="418.6" anchorOffsetX="0"/>
-	<e:Label text="密码" x="112" y="468.02" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="468.02" anchorOffsetX="0" displayAsPassword="true"/>
-	<e:Label text="确认密码" x="112" y="509.84" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="509.84" anchorOffsetX="0"/>
-	<e:Button label="register" y="618.75" horizontalCenter="0"/>
+	<e:Label id="login" text="has account go login" y="739.19" bold="true" textColor="0xC11111" size="24" touchEnabled="true" x="200"/>
+	<e:Label text="ACD  register" y="142" bold="true" horizontalCenter="-2" textColor="0xc11111"/>
+	<e:Label text="国家" x="112" y="333.15" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="country" width="320" height="32" x="227" y="333.15" anchorOffsetX="0" text="select country"/>
+	<e:Label text="姓名" x="112" y="258" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="user_name" width="320" height="32" x="227" y="258" anchorOffsetX="0"/>
+	<e:Label text="手机号" x="112" y="408.3" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="user_phone" width="320" height="32" x="227" y="408.3" anchorOffsetX="0"/>
+	<e:Label text="账号" x="112" y="473.45" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="account" width="320" height="32" x="227" y="473.45" anchorOffsetX="0"/>
+	<e:Label text="邀请码" x="112" y="536.6" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="invitation_code" width="320" height="32" x="227" y="536.6" anchorOffsetX="0"/>
+	<e:Label text="密码" x="112" y="600.02" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="password" width="320" height="32" x="227" y="600.02" anchorOffsetX="0" displayAsPassword="true"/>
+	<e:Label text="确认密码" x="112" y="657.84" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="password_sure" width="320" height="32" x="227" y="657.84" anchorOffsetX="0"/>
+	<e:Button id="register" label="register" y="818.75" x="271" width="120" height="60"/>
+
+	<e:Scroller id="guojia" xmlns:e="http://ns.egret.com/eui" anchorOffsetX="0" width="321" x="227" anchorOffsetY="0" height="393" y="366" visible="false">
+                <e:List id="list" width="260" height="87" anchorOffsetY="0" anchorOffsetX="0" x="103" y="213.3" locked="true">
+                    <e:itemRendererSkinName>
+                        <e:Skin states="up,down,disabled" height="50">
+                            <e:Label text="{data.label}" textColor="0xFFFFFF" horizontalCenter="0" verticalCenter="0"/>
+                        </e:Skin>
+                    </e:itemRendererSkinName>
+									<e:ArrayCollection>
+										<e:Array>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+											<e:Object guojia="中国" label="China"/>
+										</e:Array>
+									</e:ArrayCollection>
+                </e:List>
+            </e:Scroller>
+	<e:Component height="80" left="0" right="0" top="0" skinName="Title" id="title"/>
+	
 </e:Skin>

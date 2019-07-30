@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="login" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect fillColor="0xA8A8A8" left="-2" right="2" top="0" bottom="0"/>
-	<e:Label text="ACD  login" y="82" bold="true" horizontalCenter="-2" textColor="0xC11111"/>
-	<e:Label id="register" text="not account go register" y="562.28" bold="true" textColor="0xC11111" size="24" horizontalCenter="0" touchEnabled="true"/>
-	<e:Label text="账号" x="112" y="363.45" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="363.45" anchorOffsetX="0"/>
-	<e:Label text="密码" x="112" y="468.02" textColor="0x000000" size="22"/>
-	<e:TextInput width="320" height="26" x="227" y="468.02" anchorOffsetX="0"/>
-	<e:Button label="login" y="618.75" horizontalCenter="0"/>
+	<e:Rect fillColor="0xA8A8A8" left="-2" right="2" top="0" bottom="0" locked="true"/>
+	<e:Label text="ACD  login" y="182" bold="true" textColor="0xC11111" horizontalCenter="0"/>
+	<e:Label id="register" text="not account go register" y="702.28" bold="true" textColor="0xC11111" size="24" horizontalCenter="0.5" touchEnabled="true"/>
+	<e:Label text="账号" x="112" y="363.45" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="account" width="320" height="32" x="227" y="363.45" anchorOffsetX="0"/>
+	<e:Label text="密码" x="112" y="468.02" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
+	<e:TextInput id="password" width="320" height="32" x="227" y="468.02" anchorOffsetX="0"/>
+	<e:Button id="login" label="login" y="758.75" horizontalCenter="0" width="120" height="60"/>
+	<e:Component id="title" height="80" left="0" right="0" top="0" skinName="Title"/>
 </e:Skin>
