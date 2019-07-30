@@ -6,7 +6,7 @@
 	<e:Label text="账号" x="112" y="363.45" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
 	<e:TextInput id="account" width="320" height="32" x="227" y="363.45" anchorOffsetX="0"/>
 	<e:Label text="密码" x="112" y="468.02" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
-	<e:TextInput id="password" width="320" height="32" x="227" y="468.02" anchorOffsetX="0"/>
+	<e:TextInput id="password" width="320" height="32" x="227" y="468.02" anchorOffsetX="0" displayAsPassword="true"/>
 	<e:Button id="login" label="login" y="758.75" horizontalCenter="0" width="120" height="60"/>
 	<e:Component id="title" height="80" left="0" right="0" top="0" skinName="Title"/>
 </e:Skin>

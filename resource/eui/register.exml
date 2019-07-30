@@ -16,7 +16,7 @@
 	<e:Label text="密码" x="112" y="600.02" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
 	<e:TextInput id="password" width="320" height="32" x="227" y="600.02" anchorOffsetX="0" displayAsPassword="true"/>
 	<e:Label text="确认密码" x="112" y="657.84" textColor="0x000000" size="22" height="32" verticalAlign="middle"/>
-	<e:TextInput id="password_sure" width="320" height="32" x="227" y="657.84" anchorOffsetX="0"/>
+	<e:TextInput id="password_sure" width="320" height="32" x="227" y="657.84" anchorOffsetX="0" displayAsPassword="true"/>
 	<e:Button id="register" label="register" y="818.75" x="271" width="120" height="60"/>
 
 	<e:Scroller id="guojia" xmlns:e="http://ns.egret.com/eui" anchorOffsetX="0" width="321" x="227" anchorOffsetY="0" height="393" y="366" visible="false">

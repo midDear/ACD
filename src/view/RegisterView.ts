@@ -35,7 +35,7 @@ class RegisterView extends BasicView {
 		this.gc();
 	}
 	private onLogin(e: egret.TouchEvent): void {
-		
+
 		this.gc();
 
 		var parent = this.parent;
@@ -47,11 +47,48 @@ class RegisterView extends BasicView {
 
 	}
 	private onRegister(e: egret.TouchEvent): void {
-		if (this.account.text.length >= 4 && this.password.text.length >= 4) {
-			// RequestMethod.post("",{},(code,data)=>{
 
-			// })
+		if (this.user_name.text.length < 2) {
+			return;
 		}
+		if (this.password.text.length < 2) {
+
+			return;
+		}
+		if (this.password.text!=this.password_sure.text) {
+
+			return;
+		}
+		if (this.user_phone.text.length < 2) {
+
+			return;
+		}
+		if (this.invitation_code.text.length < 2) {
+
+			return;
+		}
+		if (this.account.text.length < 2) {
+
+			return;
+		}
+		if (this.country.text.length < 2) {
+
+			return;
+		}
+
+
+		var obj = {
+			username: this.user_name.text,
+			password: this.password.text,
+			phone: this.user_phone.text,
+			invite_name: this.invitation_code.text,
+			real_name: this.account.text,
+			country: this.country.text,
+		}
+
+		GetData.register(obj,(code,res)=>{
+			utils.T.trace("register", code, res);
+		})
 	}
 
 

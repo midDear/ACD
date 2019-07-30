@@ -4,12 +4,11 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var Global = (function () {
     function Global() {
     }
-    Global.data = function () {
-    };
     Global.datas = {
         domain: "",
-        login: "",
-        register: "",
+        login: "https://www.fastwin.io:9883/acd/login",
+        register: "https://www.fastwin.io:9883/acd/register",
+        UserInfo: "https://www.fastwin.io:9883/acd/getUserInfo",
     };
     return Global;
 }());

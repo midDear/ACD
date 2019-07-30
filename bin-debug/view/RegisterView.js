@@ -37,10 +37,38 @@ var RegisterView = (function (_super) {
         utils.TweenMe.to(ui, { y: ui.y + 30, alpha: 1 }, 0.8);
     };
     RegisterView.prototype.onRegister = function (e) {
-        if (this.account.text.length >= 4 && this.password.text.length >= 4) {
-            // RequestMethod.post("",{},(code,data)=>{
-            // })
+        if (this.user_name.text.length < 2) {
+            return;
         }
+        if (this.password.text.length < 2) {
+            return;
+        }
+        if (this.password.text != this.password_sure.text) {
+            return;
+        }
+        if (this.user_phone.text.length < 2) {
+            return;
+        }
+        if (this.invitation_code.text.length < 2) {
+            return;
+        }
+        if (this.account.text.length < 2) {
+            return;
+        }
+        if (this.country.text.length < 2) {
+            return;
+        }
+        var obj = {
+            username: this.user_name.text,
+            password: this.password.text,
+            phone: this.user_phone.text,
+            invite_name: this.invitation_code.text,
+            real_name: this.account.text,
+            country: this.country.text,
+        };
+        GetData.register(obj, function (code, res) {
+            utils.T.trace("register", code, res);
+        });
     };
     RegisterView.prototype.removeEvents = function () {
         this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);

@@ -29,7 +29,16 @@ var LoginView = (function (_super) {
     };
     LoginView.prototype.onLogin = function (e) {
         if (this.account.text.length >= 4 && this.password.text.length >= 4) {
+            utils.T.trace("onLogin", this.password.text);
+            var obj = {
+                username: this.account.text,
+                password: this.password.text,
+            };
+            GetData.login(obj, function (code, res) {
+                utils.T.trace("login", code, res);
+            });
             // RequestMethod.post("",{},(code,data)=>{
+            // test_2_1
             // })
         }
     };

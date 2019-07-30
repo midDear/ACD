@@ -7,7 +7,11 @@ class RequestMethod {
 
 		var request: egret.HttpRequest = new egret.HttpRequest();
 		request.responseType = egret.HttpResponseType.TEXT;
-		request.timeout = 1500;
+		// request.timeout = 1500;
+		// request.withCredentials = true;
+
+		
+
 		request.open(path, egret.HttpMethod.GET);
 		request.send();
 		request.addEventListener(egret.Event.COMPLETE, onGetComplete, this);
@@ -17,20 +21,20 @@ class RequestMethod {
 
 
 		function onGetComplete(event: egret.Event): void {
-			egret.log("get data : ", request.response);
+			// egret.log("get data : ", request.response);
 			if(backfunc) backfunc(1,request.response);
 		}
 
 
 		function onGetIOError(event: egret.IOErrorEvent): void {
-			egret.log("get error : " + event);
+			// egret.log("get error : " + event);
 			if(backfunc) backfunc(-1,request.response);
 		}
 		
 		
 
 		function onGetProgress(event: egret.ProgressEvent): void {
-			egret.log("get progress : " + Math.floor(100*event.bytesLoaded/event.bytesTotal) + "%");
+			// egret.log("get progress : " + Math.floor(100*event.bytesLoaded/event.bytesTotal) + "%");
 		}
 	}
 
@@ -39,6 +43,8 @@ class RequestMethod {
 		var request: egret.HttpRequest = new egret.HttpRequest();
 		request.responseType = egret.HttpResponseType.TEXT;
 		request.timeout = 1500;
+		request.withCredentials = true;
+		request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		request.open(path, egret.HttpMethod.POST);
 		request.send(data);
 		request.addEventListener(egret.Event.COMPLETE, onGetComplete, this);
@@ -48,20 +54,20 @@ class RequestMethod {
 
 
 		function onGetComplete(event: egret.Event): void {
-			egret.log("post data : ", request.response);
+			// egret.log("post data : ", request.response);
 			if(backfunc) backfunc(1,request.response);
 		}
 
 
 		function onGetIOError(event: egret.IOErrorEvent): void {
-			egret.log("post error : " + event);
+			// egret.log("post error : " + event);
 			if(backfunc) backfunc(-1,request.response);
 		}
 		
 		
 
 		function onGetProgress(event: egret.ProgressEvent): void {
-			egret.log("post progress : " + Math.floor(100*event.bytesLoaded/event.bytesTotal) + "%");
+			// egret.log("post progress : " + Math.floor(100*event.bytesLoaded/event.bytesTotal) + "%");
 		}
 	}
 }

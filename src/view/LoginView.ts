@@ -33,15 +33,25 @@ class LoginView extends BasicView {
 	}
 	private onLogin(e: egret.TouchEvent): void {
 		if (this.account.text.length >= 4 && this.password.text.length >= 4) {
-			// RequestMethod.post("",{},(code,data)=>{
 
+			utils.T.trace("onLogin", this.password.text);
+			var obj = {
+				username: this.account.text,
+				password: this.password.text,
+			}
+
+			GetData.login(obj, (code, res) => {
+				utils.T.trace("login", code, res);
+			})
+			// RequestMethod.post("",{},(code,data)=>{
+// test_2_1
 			// })
 		}
 	}
 	private onRegister(e: egret.TouchEvent): void {
 
 		this.gc();
-		
+
 		var parent = this.parent;
 		var ui = new RegisterView();
 		parent.addChild(ui);
