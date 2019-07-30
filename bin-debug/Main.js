@@ -78,6 +78,9 @@ var Main = (function (_super) {
     }
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
+        //         egret.registerFontMapping("font1", "fonts/font1.ttf");
+        // egret.registerFontMapping("font2", "fonts/font2.otf");
+        // egret.registerFontMapping("font3", "fonts/font3.TTF");
         egret.lifecycle.addLifecycleListener(function (context) {
             // custom lifecycle plugin
         });

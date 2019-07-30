@@ -29,8 +29,10 @@
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
+		"resource/eui/Home.exml",
 		"resource/eui/Title.exml",
 		"resource/eui/login.exml",
+		"resource/eui/Logo.exml",
 		"resource/eui/Me.exml",
 		"resource/eui/NavConpane.exml",
 		"resource/eui/register.exml"

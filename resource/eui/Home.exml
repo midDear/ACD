@@ -4,6 +4,6 @@
 	<e:Group x="166" y="252">
 		<e:Rect width="402" height="134" x="0" y="16" ellipseWidth="40" ellipseHeight="40" fillColor="0xffbd00"/>
 		<e:Rect width="402" height="134" x="18" y="0" ellipseWidth="40" ellipseHeight="40" fillColor="0xffffff"/>
-		<e:Label text="ARCADE" x="47" y="19" textColor="0xffac00" size="96" fontFamily="Tahoma"/>
+		<e:Image source="logo_png" x="110" y="52"/>
 	</e:Group>
 </e:Skin>

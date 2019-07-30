@@ -9,7 +9,6 @@ var RequestMethod = (function () {
         request.responseType = egret.HttpResponseType.TEXT;
         // request.timeout = 1500;
         // request.withCredentials = true;
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.open(path, egret.HttpMethod.GET);
         request.send();
         request.addEventListener(egret.Event.COMPLETE, onGetComplete, this);
@@ -30,9 +29,20 @@ var RequestMethod = (function () {
         }
     };
     RequestMethod.post = function (path, data, backfunc) {
+        var str = "";
+        if (data) {
+            for (var key in data) {
+                str += key + "=";
+                str += data[key] + "&";
+            }
+            data = str.slice(0, -1);
+        }
         var request = new egret.HttpRequest();
         request.responseType = egret.HttpResponseType.TEXT;
-        request.timeout = 1500;
+        // request.timeout = 1500;
+        // request.withCredentials = true;
+        utils.T.trace("post-data", data);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.open(path, egret.HttpMethod.POST);
         request.send(data);
         request.addEventListener(egret.Event.COMPLETE, onGetComplete, this);

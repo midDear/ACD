@@ -1,8 +1,5 @@
 class RequestMethod {
 
-
-
-
 	public static get(path, backfunc): void {
 
 		var request: egret.HttpRequest = new egret.HttpRequest();
@@ -31,19 +28,27 @@ class RequestMethod {
 			if(backfunc) backfunc(-1,request.response);
 		}
 		
-		
-
 		function onGetProgress(event: egret.ProgressEvent): void {
 			// egret.log("get progress : " + Math.floor(100*event.bytesLoaded/event.bytesTotal) + "%");
 		}
 	}
 
 	public static post(path,data, backfunc): void {
+		let str = "";
+		if(data){
+			for(let key in data){
+				str += key+"=";
+				str += data[key]+"&";
+			}
+
+			data = str.slice(0,-1);
+		}
 
 		var request: egret.HttpRequest = new egret.HttpRequest();
 		request.responseType = egret.HttpResponseType.TEXT;
-		request.timeout = 1500;
-		request.withCredentials = true;
+		// request.timeout = 1500;
+		// request.withCredentials = true;
+		utils.T.trace("post-data",data);
 		request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		request.open(path, egret.HttpMethod.POST);
 		request.send(data);

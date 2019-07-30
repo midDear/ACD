@@ -32,6 +32,9 @@ class Main extends eui.UILayer {
 
     protected createChildren(): void {
         super.createChildren();
+//         egret.registerFontMapping("font1", "fonts/font1.ttf");
+// egret.registerFontMapping("font2", "fonts/font2.otf");
+// egret.registerFontMapping("font3", "fonts/font3.TTF");
 
         egret.lifecycle.addLifecycleListener((context) => {
             // custom lifecycle plugin

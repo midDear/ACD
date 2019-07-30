@@ -6,15 +6,15 @@ var GetData = (function () {
     }
     GetData.register = function (data, bf) {
         var path = Global.datas.register;
-        RequestMethod.post(path, JSON.stringify(data), bf);
+        RequestMethod.post(path, (data), bf);
     };
     GetData.login = function (data, bf) {
         var path = Global.datas.login;
-        RequestMethod.post(path, JSON.stringify(data), bf);
+        RequestMethod.post(path, (data), bf);
     };
     GetData.userInfo = function (data, bf) {
         var path = Global.datas.userInfo;
-        RequestMethod.post(path, JSON.stringify(data), bf);
+        RequestMethod.post(path, (data), bf);
     };
     return GetData;
 }());

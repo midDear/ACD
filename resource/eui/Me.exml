@@ -11,4 +11,9 @@
 	<e:Label id="acd" text="1.068" x="158" y="314" anchorOffsetX="0" width="278" anchorOffsetY="0" height="70" textColor="0xeda802" verticalAlign="middle" textAlign="center" size="80" bold="true"/>
 	<e:Rect id="arc" width="280" height="280" y="568" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="280" ellipseHeight="280" strokeWeight="10" strokeColor="0xffffff" fillAlpha="0" horizontalCenter="0"/>
 	<e:Label id="time" text="12:56:23" y="668" anchorOffsetX="0" width="278" anchorOffsetY="0" height="70" textColor="0xEDA802" verticalAlign="middle" textAlign="center" size="52" horizontalCenter="0"/>
+	<e:Group x="166" y="62">
+		<e:Rect width="402" height="134" x="0" y="16" ellipseWidth="40" ellipseHeight="40" fillColor="0xFFBD00"/>
+		<e:Rect width="402" height="134" x="18" y="0" ellipseWidth="40" ellipseHeight="40" fillColor="0xFFFFFF"/>
+		<e:Label text="ARCADE" x="47" y="19" textColor="0xFFAC00" size="96" fontFamily="fiver"/>
+	</e:Group>
 </e:Skin>
