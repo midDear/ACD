@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="Logo" width="420" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group x="0" y="0" locked="true">
-		<e:Rect width="402" x="0" height="134" ellipseWidth="40" ellipseHeight="40" fillColor="0xffbd00" y="16"/>
-		<e:Rect width="402" height="134" ellipseWidth="40" ellipseHeight="40" fillColor="0xffffff" x="18" y="0"/>
-		<e:Label text="ARCADE" textColor="0xffac00" size="96" verticalAlign="middle" fontFamily="Georgia" x="14" y="27"/>
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Rect ellipseWidth="40" ellipseHeight="40" fillColor="0xffbd00" left="0" right="0" bottom="0" top="16"/>
+		<e:Rect ellipseWidth="40" ellipseHeight="40" fillColor="0xffffff" left="18" right="0" top="0" bottom="16"/>
+		<e:Label text="ARCADE" textColor="0xffac00" size="56" fontFamily="Georgia" left="18" right="0" top="0" bottom="18" verticalAlign="middle" textAlign="center"/>
 	</e:Group>
 
 </e:Skin>

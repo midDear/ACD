@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MyBottomBar" width="750" height="100" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Group left="0" top="0" bottom="0" width="25%">
+			<e:Image width="40" height="40" y="16" horizontalCenter="0" fillMode="scale" source="icon_home_sel_png"/>
+			<e:Label text="首页" horizontalCenter="0" size="20" textColor="0xffbd00" bottom="14"/>
+		</e:Group>
+		<e:Group width="25%" x="187.00000000000003" top="0" bottom="0"/>
+		<e:Group width="25%" x="375.00000000000006" top="0" bottom="0"/>
+		<e:Group top="0" bottom="0" width="25%" x="562"/>
+	</e:Group>
+</e:Skin>
