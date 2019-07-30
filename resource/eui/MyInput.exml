@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MyInput" width="420" height="80" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="bg" ellipseWidth="28" ellipseHeight="28" strokeColor="0xFFFFFF" fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0"/>
+	<e:EditableText id="input" text="" anchorOffsetY="0" left="62" right="5" top="5" bottom="5" textAlign="left" verticalAlign="middle" promptColor="0xc0c0c0" textColor="0xffd000" size="28"/>
+</e:Skin>
