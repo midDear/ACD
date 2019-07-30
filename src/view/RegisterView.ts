@@ -23,6 +23,7 @@ class RegisterView extends BasicView {
 
 		this.title["title"].text = "账号登入";
 
+
 	}
 
 	protected addEvents(): void {
