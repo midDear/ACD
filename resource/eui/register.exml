@@ -27,7 +27,7 @@
 		<e:Rect fillColor="0xFFFFFF" ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeAlpha="0"/>
 		<e:EditableText id="invitation_code" text="" top="5" bottom="5" right="20" left="62" size="28" promptColor="0xC0C0C0" prompt="输入邀请码" textColor="0xFFD000" verticalAlign="middle"/>
 	</e:Group>
-	<e:Button id="register" label="提交注册" width="240" height="80" enabled="true" horizontalCenter="0" bottom="136" skinName="skins.MyButton"/>
+	<e:Button id="register" label="提交注册" width="240" height="80" enabled="true" horizontalCenter="0" bottom="136" skinName="skins.MyButtonSkin"/>
 	<e:Label id="back" text="&lt;" x="0" y="0" scaleY="2" size="54" height="60" width="120" verticalAlign="middle" textAlign="center" touchEnabled="true"/>
 
 	

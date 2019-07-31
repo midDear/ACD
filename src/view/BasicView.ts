@@ -18,6 +18,9 @@ class BasicView extends eui.Component {
 	}
 
 	protected childrenCreated(): void {
+
+		utils.T.trace("childrenCreated=",egret.getQualifiedClassName(this),this.height);
+		
 		this.initUi();
 		this.addEvents();
 	}

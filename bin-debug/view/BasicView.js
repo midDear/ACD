@@ -29,6 +29,7 @@ var BasicView = (function (_super) {
         }
     };
     BasicView.prototype.childrenCreated = function () {
+        utils.T.trace("childrenCreated=", egret.getQualifiedClassName(this), this.height);
         this.initUi();
         this.addEvents();
     };

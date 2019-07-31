@@ -14,6 +14,6 @@
 	<e:Group x="166" y="62">
 		<e:Rect width="402" height="134" x="0" y="16" ellipseWidth="40" ellipseHeight="40" fillColor="0xFFBD00"/>
 		<e:Rect width="402" height="134" x="18" y="0" ellipseWidth="40" ellipseHeight="40" fillColor="0xFFFFFF"/>
-		<e:Label text="ARCADE" x="47" y="19" textColor="0xFFAC00" size="96" fontFamily="fiver"/>
+		<e:Label text="ARCADE" x="47" y="19" textColor="0xFFAC00" size="96" fontFamily="Arial"/>
 	</e:Group>
 </e:Skin>

@@ -52,7 +52,9 @@ declare module skins{
 }
 declare class EarnPage extends eui.Skin{
 }
-declare class WhitePaperPage extends eui.Skin{
+declare class EarnRankLevelPage extends eui.Skin{
+}
+declare class FAQPage extends eui.Skin{
 }
 declare class Home extends eui.Skin{
 }
@@ -85,4 +87,6 @@ declare class MyTopBar extends eui.Skin{
 declare class NavConpane extends eui.Skin{
 }
 declare class register extends eui.Skin{
+}
+declare class WhitePaperPage extends eui.Skin{
 }
