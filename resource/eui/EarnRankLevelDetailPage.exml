@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EarnRankLevelDetailPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
+	<e:Component height="0" left="0" right="0" skinName="MyTopBar" top="0" locked="true"/>
+	<e:Group left="32" right="32" bottom="106" top="128">
+		<e:Group height="80" left="0" right="0" top="40">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xffbd00" fillColor="0xfbfbfb"/>
+			<e:Label text="total 30" size="24" height="34" verticalAlign="middle" verticalCenter="0" horizontalCenter="0" textColor="0x666666"/>
+			<e:Label text="邀请人数: 13人" height="34" textAlign="center" right="40" scaleY="1" size="24" textColor="0xb8b8b8" verticalCenter="0" verticalAlign="middle"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>
