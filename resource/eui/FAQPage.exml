@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="WhitePaperPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui">
+<e:Skin class="FAQPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xfbfbfb"/>
 	<e:Component height="0" left="0" right="0" top="0" skinName="MyTopBar"/>
 	<e:Label text="text " right="32" left="32" bottom="98" top="148" size="36" textColor="0xffbd00" verticalAlign="middle" textAlign="center"/>
