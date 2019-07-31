@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="Title" width="640" height="80" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x353535"/>
-	<e:Label id="back" text="&lt;" x="1" y="19.6" scaleY="2" anchorOffsetX="0" width="45.2" textAlign="center"/>
-	<e:Label id="title" text="Label" y="33" horizontalCenter="0" width="320" textAlign="center"/>
-</e:Skin>

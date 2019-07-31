@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EarnPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xfbfbfb"/>
+	<e:Component height="128" y="0" left="0" right="0" skinName="MyTopBar"/>
+	<e:Component height="100" bottom="0" left="0" right="0" skinName="MyBottomBar"/>
+	<e:Group y="148" left="32" right="32" height="100">
+		<e:Rect fillColor="0xffffff" left="0" right="0" top="0" bottom="0"/>
+		<e:Image width="40" height="40" verticalCenter="0" left="20" source="icon_home_sel_png"/>
+		<e:Label text="等级" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
+	</e:Group>
+	<e:Group y="268" left="32" right="32" height="100">
+		<e:Rect fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0"/>
+		<e:Image width="40" height="40" verticalCenter="0" left="20" source="icon_home_sel_png"/>
+		<e:Label text="剩余时间20:20:01" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
+	</e:Group>
+	<e:Group y="388" left="32" right="32" height="100">
+		<e:Rect fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0"/>
+		<e:Image width="40" height="40" verticalCenter="0" left="20" source="icon_home_sel_png"/>
+		<e:Label text="1.06783" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
+	</e:Group>
+	<e:Group height="520" left="32" right="32" top="528">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+		<e:Label text="method" verticalCenter="0" horizontalCenter="0" textColor="0xffbd00" size="28"/>
+	</e:Group>
+	<e:Group height="100" left="0" right="0" bottom="98">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffbd00"/>
+		<e:Label text="Total" textColor="0xffffff" size="42" left="32" verticalCenter="0" height="58" verticalAlign="middle"/>
+		<e:Label text="0.39ACD/hr" textColor="0xFFFFFF" size="42" verticalCenter="0" height="58" verticalAlign="middle" right="32"/>
+	</e:Group>
+</e:Skin>
