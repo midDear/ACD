@@ -16,6 +16,7 @@ class LoginView extends BasicView {
 
 	protected initUi(): void {
 		this.resize();
+		
 	}
 
 	protected addEvents(): void {
