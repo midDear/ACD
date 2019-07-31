@@ -34,14 +34,21 @@ class BasicView extends eui.Component {
 
 	}
 
-	public gc(): void {
+	public gc(b: boolean = false): void {
 		this.removeEvents();
 		if (this.parent) {
-			utils.TweenMe.to(this, { y:  50, alpha: 0 }, 0.45, 0,null,false, () => {
+			if (b) {
 				if (this.parent) {
 					this.parent.removeChild(this);
 				}
-			});
+			} else {
+				utils.TweenMe.to(this, { y: 50, alpha: 0 }, 0.45, 0, null, false, () => {
+					if (this.parent) {
+						this.parent.removeChild(this);
+					}
+				});
+			}
+
 		}
 	}
 

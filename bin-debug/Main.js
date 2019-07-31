@@ -166,11 +166,7 @@ var Main = (function (_super) {
      */
     Main.prototype.createGameScene = function () {
         console.log("createGameScene");
-        this.addChild(new MeView());
-        this.addLogin();
-    };
-    Main.prototype.addLogin = function () {
-        this.addChild(new LoginView());
+        this.addChild(new MainView());
     };
     return Main;
 }(eui.UILayer));

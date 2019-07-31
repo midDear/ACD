@@ -1,34 +1,32 @@
 class RegisterView extends BasicView {
 
-	public login: eui.Label;
-	public country: eui.TextInput;
-	public user_name: eui.TextInput;
-	public user_phone: eui.TextInput;
-	public account: eui.TextInput;
-	public invitation_code: eui.TextInput;
-	public password: eui.TextInput;
-	public password_sure: eui.TextInput;
+	public country: eui.Label;
+	public user_phone: eui.EditableText;
+	public user_name: eui.EditableText;
+	public account: eui.EditableText;
+	public password: eui.EditableText;
+	public invitation_code: eui.EditableText;
 	public register: eui.Button;
-	public guojia: eui.Scroller;
-	public list: eui.List;
-	public title: eui.Component;
+	public back: eui.Label;
 
-	public constructor() {
+
+
+
+
+	private bf: Function;
+	public constructor(_bf: Function = null) {
 		super();
+		this.bf = _bf;
 		this.skinName = "resource/eui/register.exml";
 	}
 
 	protected initUi(): void {
 		this.resize();
 
-		this.title["title"].text = "账号登入";
-
-
 	}
 
 	protected addEvents(): void {
-		this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
-		this.login.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
+		this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 		this.register.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
 	}
 
@@ -56,10 +54,7 @@ class RegisterView extends BasicView {
 
 			return;
 		}
-		if (this.password.text!=this.password_sure.text) {
 
-			return;
-		}
 		if (this.user_phone.text.length < 2) {
 
 			return;
@@ -87,15 +82,34 @@ class RegisterView extends BasicView {
 			country: this.country.text,
 		}
 
-		GetData.register(obj,(code,res)=>{
+		GetData.register(obj, (code, res) => {
 			utils.T.trace("register", code, res);
+			if (code == 1) {
+				if (this.bf) this.bf();
+			}
 		})
 	}
 
 
 	protected removeEvents(): void {
-		this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
-		this.login.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
+		this.back.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 		this.register.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+	}
+
+	public gc(b: boolean = false): void {
+		this.removeEvents();
+		if (this.parent) {
+			if (b) {
+				if (this.parent) {
+					this.parent.removeChild(this);
+				}
+			} else {
+				utils.TweenMe.to(this, { x: this.stage.stageWidth, alpha: 0 }, 0.45, 0, null, false, () => {
+					if (this.parent) {
+						this.parent.removeChild(this);
+					}
+				});
+			}
+		}
 	}
 }

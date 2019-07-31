@@ -103,18 +103,6 @@ class Main extends eui.UILayer {
     protected createGameScene(): void {
         console.log("createGameScene");
 
-        this.addChild(new MeView());
-        this.addLogin();
-
-
+        this.addChild(new MainView());
     }
-
-
-    private addLogin(): void {
-        this.addChild(new LoginView());
-
-    }
-
-
-
 }

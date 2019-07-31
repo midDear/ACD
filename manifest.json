@@ -12,7 +12,7 @@
 	"game": [
 		"bin-debug/eventControl/Dictionary.js",
 		"bin-debug/view/BasicView.js",
-		"bin-debug/utils/EffectUtils.js",
+		"bin-debug/utils/MovieclipMethod.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/data/GetData.js",
@@ -24,9 +24,9 @@
 		"bin-debug/libs/RequestMethod.js",
 		"bin-debug/utils/Config.js",
 		"bin-debug/utils/displayobjectBlink.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/utils/EffectUtils.js",
 		"bin-debug/utils/MoveControl.js",
-		"bin-debug/utils/MovieclipMethod.js",
+		"bin-debug/LoadingUI.js",
 		"bin-debug/utils/MyBitmap.js",
 		"bin-debug/utils/MyTimer.js",
 		"bin-debug/utils/OBJ.js",
@@ -36,8 +36,11 @@
 		"bin-debug/utils/TweenMe.js",
 		"bin-debug/utils/upfile.js",
 		"bin-debug/Main.js",
+		"bin-debug/view/HomeView.js",
 		"bin-debug/view/LoginView.js",
+		"bin-debug/view/MainView.js",
 		"bin-debug/view/MeView.js",
+		"bin-debug/view/MyButton.js",
 		"bin-debug/view/RegisterView.js"
 	]
 }

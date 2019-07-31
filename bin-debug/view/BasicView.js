@@ -38,15 +38,23 @@ var BasicView = (function (_super) {
     };
     BasicView.prototype.removeEvents = function () {
     };
-    BasicView.prototype.gc = function () {
+    BasicView.prototype.gc = function (b) {
         var _this = this;
+        if (b === void 0) { b = false; }
         this.removeEvents();
         if (this.parent) {
-            utils.TweenMe.to(this, { y: 50, alpha: 0 }, 0.45, 0, null, false, function () {
-                if (_this.parent) {
-                    _this.parent.removeChild(_this);
+            if (b) {
+                if (this.parent) {
+                    this.parent.removeChild(this);
                 }
-            });
+            }
+            else {
+                utils.TweenMe.to(this, { y: 50, alpha: 0 }, 0.45, 0, null, false, function () {
+                    if (_this.parent) {
+                        _this.parent.removeChild(_this);
+                    }
+                });
+            }
         }
     };
     return BasicView;

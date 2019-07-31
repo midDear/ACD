@@ -50,7 +50,13 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
+declare class EarnPage extends eui.Skin{
+}
+declare class WhitePaperPage extends eui.Skin{
+}
 declare class Home extends eui.Skin{
+}
+declare class IndexPage extends eui.Skin{
 }
 declare class login extends eui.Skin{
 }
@@ -58,9 +64,25 @@ declare class Logo extends eui.Skin{
 }
 declare class Me extends eui.Skin{
 }
+declare class MyAvatarCompment extends eui.Skin{
+}
+declare class MyBottomBar extends eui.Skin{
+}
+declare module skins{
+	class MyButtonSkin extends eui.Skin{
+	}
+}
+declare class MyCommunityItemCompment extends eui.Skin{
+}
+declare class MyInput extends eui.Skin{
+}
+declare class MyNav extends eui.Skin{
+}
+declare class MySilderItemCompnent extends eui.Skin{
+}
+declare class MyTopBar extends eui.Skin{
+}
 declare class NavConpane extends eui.Skin{
 }
 declare class register extends eui.Skin{
-}
-declare class Title extends eui.Skin{
 }
