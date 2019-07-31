@@ -37,9 +37,9 @@
 		"bin-debug/utils/upfile.js",
 		"bin-debug/Main.js",
 		"bin-debug/view/HomeView.js",
+		"bin-debug/view/IndexView.js",
 		"bin-debug/view/LoginView.js",
 		"bin-debug/view/MainView.js",
-		"bin-debug/view/MeView.js",
 		"bin-debug/view/MyButton.js",
 		"bin-debug/view/RegisterView.js"
 	]

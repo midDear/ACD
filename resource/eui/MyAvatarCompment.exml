@@ -4,4 +4,5 @@
 	<e:Image width="60" height="60" x="32" y="54" source="icon_home_sel_png" locked="true"/>
 	<e:Label text="ACD(CHINA)" y="54" right="10" left="112" height="34" verticalAlign="middle" textColor="0x333333" locked="true"/>
 	<e:Label text="13888888888" y="86" right="10" left="112" textColor="0x333333" size="20" height="28" verticalAlign="middle" locked="true"/>
+	<e:Rect height="2" left="0" right="0" bottom="0" fillColor="0xd8d8d8"/>
 </e:Skin>

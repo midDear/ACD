@@ -101,8 +101,6 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected createGameScene(): void {
-        console.log("createGameScene");
-
-        this.addChild(new MainView());
+        this.addChild(new view.MainView());
     }
 }

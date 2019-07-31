@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="NavConpane" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.6" locked="true"/>
-	<e:Rect left="0" top="0" bottom="0" width="420" fillColor="0xffffff" locked="true"/>
+	<e:Rect left="0" top="0" bottom="0" width="434" fillColor="0xffffff"/>
 	<e:Label text="版本号：1.0.0" x="115.34" textColor="0x000000" bottom="46" locked="true"/>
-	<e:Rect height="2" y="80" left="0" width="420"/>
-	<e:Label text="姓名：SS" x="6.5" y="8" textColor="0x000000"/>
-	<e:Label text="账号：SS001" x="6.5" y="42" textColor="0x000000"/>
-	<e:Button label="CHAT" y="85.5" width="420" left="0"/>
-	<e:Button label="Earning Team" y="137" width="420" left="-1"/>
-	<e:Button label="Roles" y="188.5" width="420" left="-1"/>
-	<e:Button label="White Paper" y="239" width="420" left="0"/>
-	<e:Button label="FAQ" y="290.5" width="420" left="-1"/>
-	<e:Button label="个人中心" y="342" width="420" left="-1"/>
+	<e:Component width="434" height="126" skinName="MyAvatarCompment" left="0" top="0"/>
+	<e:Component width="434" height="62" x="0" y="132" skinName="MySilderItemCompnent"/>
+	<e:Component width="434" height="62" x="0" y="208" skinName="MySilderItemCompnent"/>
+	<e:Component width="434" height="62" x="0" y="284" skinName="MySilderItemCompnent"/>
+	<e:Component width="434" height="62" x="0" y="360" skinName="MySilderItemCompnent"/>
+	<e:Component width="434" height="62" x="0" y="436" skinName="MySilderItemCompnent"/>
+	<e:Component width="434" height="62" x="0" y="512" skinName="MySilderItemCompnent"/>
 </e:Skin>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="MySilderItemCompnent" width="400" height="62" xmlns:e="http://ns.egret.com/eui">
+<e:Skin class="MySilderItemCompnent" width="400" height="62" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
-	<e:Image width="40" height="40" x="42" y="10" source="icon_home_sel_png"/>
-	<e:Label text="个人中心" verticalAlign="middle" size="24" verticalCenter="0" bottom="2" right="10" left="106" height="34" textColor="0x888888"/>
+	<e:Image id="icon" width="40" height="40" x="42" y="10" source="icon_home_sel_png"/>
+	<e:Label id="label" text="个人中心" verticalAlign="middle" size="24" verticalCenter="0" bottom="2" right="10" left="106" height="34" textColor="0x888888"/>
 	<e:Rect height="2" fillColor="0xeeeeee" left="32" right="0" bottom="0"/>
 </e:Skin>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="UserCenterPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xfbfbfb"/>
-	<e:Component height="0" y="0" left="0" right="0" skinName="MyTopBar"/>
+	<e:Component height="128" y="0" left="0" right="0" skinName="MyTopBar"/>
 	<e:Group height="200" left="32" right="32" top="168">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xffbd00"/>
 		<e:Image width="80" height="80" x="40" y="20" source="icon_home_sel_png"/>

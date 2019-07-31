@@ -165,8 +165,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
-        console.log("createGameScene");
-        this.addChild(new MainView());
+        this.addChild(new view.MainView());
     };
     return Main;
 }(eui.UILayer));

@@ -66,11 +66,6 @@
 			"url": "assets/images/icon_acd_off.png"
 		},
 		{
-			"name": "icon_chatoff.png_png",
-			"type": "image",
-			"url": "assets/images/icon_chatoff.png.png"
-		},
-		{
 			"name": "icon_home_off_png",
 			"type": "image",
 			"url": "assets/images/icon_home_off.png"
@@ -79,12 +74,82 @@
 			"name": "icon_peo_off_png",
 			"type": "image",
 			"url": "assets/images/icon_peo_off.png"
+		},
+		{
+			"name": "icon_acd2_png",
+			"type": "image",
+			"url": "assets/images/icon_acd.png"
+		},
+		{
+			"name": "icon_acd_off2_png",
+			"type": "image",
+			"url": "assets/images/icon_acd_off.png"
+		},
+		{
+			"name": "icon_chat2_png",
+			"type": "image",
+			"url": "assets/images/icon_chat.png"
+		},
+		{
+			"name": "icon_hbo2_png",
+			"type": "image",
+			"url": "assets/images/icon_hbo.png"
+		},
+		{
+			"name": "icon_home_off2_png",
+			"type": "image",
+			"url": "assets/images/icon_home_off.png"
+		},
+		{
+			"name": "icon_kull2_png",
+			"type": "image",
+			"url": "assets/images/icon_kull.png"
+		},
+		{
+			"name": "icon_meg2_png",
+			"type": "image",
+			"url": "assets/images/icon_meg.png"
+		},
+		{
+			"name": "icon_peo2_png",
+			"type": "image",
+			"url": "assets/images/icon_peo.png"
+		},
+		{
+			"name": "icon_peo_off2_png",
+			"type": "image",
+			"url": "assets/images/icon_peo_off.png"
+		},
+		{
+			"name": "icon_ybo2_png",
+			"type": "image",
+			"url": "assets/images/icon_ybo.png"
+		},
+		{
+			"name": "logo12_png",
+			"type": "image",
+			"url": "assets/images/logo1.png"
+		},
+		{
+			"name": "txt_acd2_png",
+			"type": "image",
+			"url": "assets/images/txt_acd.png"
+		},
+		{
+			"name": "txt_mav2_png",
+			"type": "image",
+			"url": "assets/images/txt_mav.png"
+		},
+		{
+			"name": "icon_chat_off_png",
+			"type": "image",
+			"url": "assets/images/icon_chat_off.png"
 		}
 	],
 	"groups": [
 		{
 			"name": "preload",
-			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_png,icon_acd_off_png,icon_chatoff.png_png,icon_home_off_png,icon_peo_off_png"
+			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd2_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png"
 		}
 	]
 }
