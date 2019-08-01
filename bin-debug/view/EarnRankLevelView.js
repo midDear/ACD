@@ -15,34 +15,34 @@ var view;
  * @author middear
  *
  */
-    var FAQView = (function (_super) {
-        __extends(FAQView, _super);
-        function FAQView(_bf) {
+    var EarnRankLevelView = (function (_super) {
+        __extends(EarnRankLevelView, _super);
+        function EarnRankLevelView(_bf) {
             if (_bf === void 0) { _bf = null; }
             var _this = _super.call(this) || this;
             _this.bf = _bf;
-            _this.skinName = "resource/eui/FAQPage.exml";
+            _this.skinName = "resource/eui/EarnRankLevelPage.exml";
             return _this;
         }
-        FAQView.prototype.initUi = function () {
+        EarnRankLevelView.prototype.initUi = function () {
             this.resize();
             this.initTitle();
         };
-        FAQView.prototype.initTitle = function () {
+        EarnRankLevelView.prototype.initTitle = function () {
             this.title["back"].visible = true;
-            this.title["label"].text = "FAQ";
+            this.title["label"].text = "等级";
         };
-        FAQView.prototype.tapBack = function (e) {
+        EarnRankLevelView.prototype.tapBack = function (e) {
             if (this.bf)
                 this.bf(this);
         };
-        FAQView.prototype.addEvents = function () {
+        EarnRankLevelView.prototype.addEvents = function () {
             this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
         };
-        FAQView.prototype.removeEvents = function () {
+        EarnRankLevelView.prototype.removeEvents = function () {
             this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
         };
-        FAQView.prototype.gc = function (b) {
+        EarnRankLevelView.prototype.gc = function (b) {
             var _this = this;
             if (b === void 0) { b = false; }
             this.removeEvents();
@@ -61,9 +61,9 @@ var view;
                 }
             }
         };
-        return FAQView;
+        return EarnRankLevelView;
     }(view.BasicView));
-    view.FAQView = FAQView;
-    __reflect(FAQView.prototype, "view.FAQView");
+    view.EarnRankLevelView = EarnRankLevelView;
+    __reflect(EarnRankLevelView.prototype, "view.EarnRankLevelView");
 })(view || (view = {}));
-//# sourceMappingURL=FAQView.js.map
+//# sourceMappingURL=EarnRankLevelView.js.map

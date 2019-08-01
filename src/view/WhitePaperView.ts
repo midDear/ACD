@@ -7,10 +7,7 @@
 	export class WhitePaperView extends BasicView {
 
 
-		public label: eui.Component;
-		public time: eui.Label;
-		public shoyi: eui.Label;
-		public shudu: eui.Label;
+		public title: eui.Component;
 
 
 		private bf: Function;
@@ -22,15 +19,25 @@
 		}
 
 		protected initUi(): void {
-			this.resize(0, this.stage.stageHeight - 100);
+			this.resize();
+			this.initTitle();
+		}
+
+		private initTitle(): void {
+			this.title["back"].visible = true;
+			this.title["label"].text = "白皮书";
+		}
+
+		private tapBack(e:egret.TouchEvent):void{
+			if(this.bf) this.bf(this);
 		}
 
 		protected addEvents(): void {
-
+			this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 		}
 
 		protected removeEvents(): void {
-
+			this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 		}
 
 		public gc(b: boolean = false): void {

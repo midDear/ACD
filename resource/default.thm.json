@@ -50,6 +50,7 @@
 		"resource/eui/MySilderItemCompnent.exml",
 		"resource/eui/NavConpane.exml",
 		"resource/eui/register.exml",
+		"resource/eui/TeamPage.exml",
 		"resource/eui/UserCenterPage.exml",
 		"resource/eui/UserUpdatePasswordPage.exml",
 		"resource/eui/WhitePaperPage.exml"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="EarnRankLevelPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
-	<e:Component height="0" left="0" right="0" skinName="MyTopBar" top="0" locked="true"/>
+	<e:Component id="title" height="0" left="0" right="0" skinName="MyTopBar" top="0"/>
 	<e:Group height="282" left="0" right="0" top="128">
 		<e:Group height="200" left="142" right="142" top="40">
 			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" fillColor="0xffffff" strokeColor="0xffbd00"/>
@@ -16,12 +16,48 @@
 		</e:Group>
 		<e:Rect height="4" bottom="0" left="0" right="0" fillColor="0xf3f3f3"/>
 	</e:Group>
-	<e:Group left="32" right="32" bottom="106" top="448">
-		<e:Group height="80" left="0" right="0" top="0">
+	<e:Group left="32" right="32" bottom="2" top="448">
+		<e:Group height="80" left="0" right="0" y="0">
 			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xffbd00" fillColor="0xfbfbfb"/>
 			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xffbd00" left="40"/>
 			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
 			<e:Label text="&gt;" width="40" height="40" textColor="0xffbd00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+		</e:Group>
+		<e:Group height="80" left="0" right="0" y="106.66666666666667">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+			<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+		</e:Group>
+		<e:Group height="80" left="0" right="0" y="213.33333333333334">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+			<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+		</e:Group>
+		<e:Group height="80" left="0" right="0" y="320.00000000000006">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+			<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+		</e:Group>
+		<e:Group height="80" left="0" right="0" y="426.66666666666674">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+			<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+		</e:Group>
+		<e:Group height="80" left="0" right="0" y="533.3333333333334">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+			<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+		</e:Group>
+		<e:Group height="80" left="0" right="0" y="640">
+			<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+			<e:Label text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+			<e:Label text="total 30" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+			<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
 		</e:Group>
 	</e:Group>
 </e:Skin>

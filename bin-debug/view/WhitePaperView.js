@@ -25,11 +25,22 @@ var view;
             return _this;
         }
         WhitePaperView.prototype.initUi = function () {
-            this.resize(0, this.stage.stageHeight - 100);
+            this.resize();
+            this.initTitle();
+        };
+        WhitePaperView.prototype.initTitle = function () {
+            this.title["back"].visible = true;
+            this.title["label"].text = "白皮书";
+        };
+        WhitePaperView.prototype.tapBack = function (e) {
+            if (this.bf)
+                this.bf(this);
         };
         WhitePaperView.prototype.addEvents = function () {
+            this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
         };
         WhitePaperView.prototype.removeEvents = function () {
+            this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
         };
         WhitePaperView.prototype.gc = function (b) {
             var _this = this;

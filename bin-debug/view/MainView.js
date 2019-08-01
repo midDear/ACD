@@ -80,11 +80,13 @@ var view;
             this.jumpPage(id);
         };
         MainView.prototype.jumpPage = function (id) {
+            var _this = this;
             utils.T.trace("jump-id=", id, this.curIndex);
             if (id < 1)
                 return;
-            this.mnav.visible = id == 1;
-            this.hideView(this.curView);
+            this.mnav.visible = (id == 1 || id >= 5);
+            if (id <= 4)
+                this.hideView(this.curView);
             if (id == 1) {
                 if (!this.indexV)
                     this.indexV = new view.IndexView();
@@ -96,30 +98,44 @@ var view;
                 this.curView = this.communityV;
             }
             else if (id == 3) {
+                if (!this.teamV)
+                    this.teamV = new view.TeamView();
+                this.curView = this.teamV;
             }
             else if (id == 4) {
                 if (!this.earmV)
                     this.earmV = new view.EarmView();
                 this.curView = this.earmV;
             }
-            else if (id == 5) {
+            else {
+                var preV;
+                if (id == 5) {
+                    if (!this.earnRankV)
+                        this.earnRankV = new view.EarnRankLevelView(function (ui) { _this.preViewBack(ui); });
+                    preV = this.earnRankV;
+                }
+                else if (id == 6) {
+                    if (!this.whitePaperV)
+                        this.whitePaperV = new view.WhitePaperView(function (ui) { _this.preViewBack(ui); });
+                    preV = this.whitePaperV;
+                }
+                else if (id == 7) {
+                    if (!this.faqV)
+                        this.faqV = new view.FAQView(function (ui) { _this.preViewBack(ui); });
+                    preV = this.faqV;
+                }
+                else if (id == 8) {
+                    if (!this.userCenterV)
+                        this.userCenterV = new view.UserCenterView(function (ui) { _this.preViewBack(ui); });
+                    preV = this.userCenterV;
+                }
+                this.showView(preV, true);
+                return;
             }
-            else if (id == 6) {
-                if (!this.whitePaperV)
-                    this.whitePaperV = new view.WhitePaperView();
-                this.curView = this.whitePaperV;
-            }
-            else if (id == 7) {
-                if (!this.faqV)
-                    this.faqV = new view.FAQView();
-                this.curView = this.faqV;
-            }
-            else if (id == 8) {
-                if (!this.userCenterV)
-                    this.userCenterV = new view.UserCenterView();
-                this.curView = this.userCenterV;
-            }
-            this.showCurView();
+            this.showView(this.curView);
+        };
+        MainView.prototype.preViewBack = function (ui) {
+            this.hideView(ui);
         };
         MainView.prototype.hideView = function (v) {
             if (v) {
@@ -132,11 +148,17 @@ var view;
                 });
             }
         };
-        MainView.prototype.showCurView = function () {
-            if (this.curView) {
-                utils.OBJ.setposition(null, this.curView, this.stage.stageWidth, 0, 1, 0);
-                this.addChildAt(this.curView, 1);
-                utils.TweenMe.to(this.curView, { x: 0, alpha: 1 }, 0.45);
+        MainView.prototype.showView = function (v, b) {
+            if (b === void 0) { b = false; }
+            if (v) {
+                utils.OBJ.setposition(null, v, this.stage.stageWidth, 0, 1, 0);
+                if (!b) {
+                    this.addChildAt(v, 1);
+                }
+                else {
+                    this.addChild(v);
+                }
+                utils.TweenMe.to(v, { x: 0, alpha: 1 }, 0.45);
             }
         };
         MainView.prototype.selectNav = function (index) {

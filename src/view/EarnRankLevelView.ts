@@ -4,10 +4,12 @@ module view {
  * @author middear
  *
  */
-	export class FAQView extends BasicView {
+	export class EarnRankLevelView extends BasicView {
 
 
-		public title:eui.Component;
+		public title: eui.Component;
+		public img_mask: eui.Rect;
+
 
 
 		private bf: Function;
@@ -15,17 +17,18 @@ module view {
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
-			this.skinName = "resource/eui/FAQPage.exml";
+			this.skinName = "resource/eui/EarnRankLevelPage.exml";
 		}
 
 		protected initUi(): void {
 			this.resize();
+
 			this.initTitle();
 		}
 
 		private initTitle(): void {
 			this.title["back"].visible = true;
-			this.title["label"].text = "FAQ";
+			this.title["label"].text = "等级";
 		}
 
 		private tapBack(e:egret.TouchEvent):void{

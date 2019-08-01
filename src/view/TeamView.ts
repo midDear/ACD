@@ -4,10 +4,13 @@ module view {
  * @author middear
  *
  */
-	export class FAQView extends BasicView {
+	export class TeamView extends BasicView {
 
 
-		public title:eui.Component;
+		public label: eui.Component;
+		public time: eui.Label;
+		public shoyi: eui.Label;
+		public shudu: eui.Label;
 
 
 		private bf: Function;
@@ -15,29 +18,19 @@ module view {
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
-			this.skinName = "resource/eui/FAQPage.exml";
+			this.skinName = "resource/eui/TeamPage.exml";
 		}
 
 		protected initUi(): void {
-			this.resize();
-			this.initTitle();
-		}
-
-		private initTitle(): void {
-			this.title["back"].visible = true;
-			this.title["label"].text = "FAQ";
-		}
-
-		private tapBack(e:egret.TouchEvent):void{
-			if(this.bf) this.bf(this);
+			this.resize(0, this.stage.stageHeight - 100);
 		}
 
 		protected addEvents(): void {
-			this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
+
 		}
 
 		protected removeEvents(): void {
-			this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
+
 		}
 
 		public gc(b: boolean = false): void {

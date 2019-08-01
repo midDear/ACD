@@ -13,6 +13,8 @@ module view {
 		private whitePaperV: WhitePaperView;
 		private userCenterV: UserCenterView;
 		private communityV: CommunityView;
+		private teamV: TeamView;
+		private earnRankV: EarnRankLevelView;
 
 		private navConpane: NavConpane;
 
@@ -108,12 +110,12 @@ module view {
 
 		private jumpPage(id): void {
 
-			utils.T.trace("jump-id=", id,this.curIndex);
+			utils.T.trace("jump-id=", id, this.curIndex);
 
 			if (id < 1) return;
-			this.mnav.visible = id == 1;
+			this.mnav.visible = (id == 1||id>=5);
 
-			this.hideView(this.curView);
+			if(id<=4) this.hideView(this.curView);
 
 			if (id == 1) {
 				if (!this.indexV) this.indexV = new IndexView();
@@ -123,25 +125,37 @@ module view {
 				if (!this.communityV) this.communityV = new CommunityView();
 				this.curView = this.communityV;
 			} else if (id == 3) {
-
+				if (!this.teamV) this.teamV = new TeamView();
+				this.curView = this.teamV;
 			} else if (id == 4) {
 				if (!this.earmV) this.earmV = new EarmView();
 				this.curView = this.earmV;
-			}
-			else if (id == 5) {
-			} else if (id == 6) {
-				if (!this.whitePaperV) this.whitePaperV = new WhitePaperView();
-				this.curView = this.whitePaperV;
-			} else if (id == 7) {
-				if (!this.faqV) this.faqV = new FAQView();
-				this.curView = this.faqV;
-			} else if (id == 8) {
-				if (!this.userCenterV) this.userCenterV = new UserCenterView();
-				this.curView = this.userCenterV;
+			} else {
+
+				var preV:BasicView;
+				if (id == 5) {
+					if (!this.earnRankV) this.earnRankV = new EarnRankLevelView((ui:BasicView)=>{this.preViewBack(ui)});
+					preV = this.earnRankV;
+				} else if (id == 6) {
+					if (!this.whitePaperV) this.whitePaperV = new WhitePaperView((ui:BasicView)=>{this.preViewBack(ui)});
+					preV = this.whitePaperV;
+				} else if (id == 7) {
+					if (!this.faqV) this.faqV = new FAQView((ui:BasicView)=>{this.preViewBack(ui)});
+					preV= this.faqV;
+				} else if (id == 8) {
+					if (!this.userCenterV) this.userCenterV = new UserCenterView((ui:BasicView)=>{this.preViewBack(ui)});
+					preV = this.userCenterV;
+				}
+
+				this.showView(preV,true);
+				return;
 			}
 
+			this.showView(this.curView);
+		}
 
-			this.showCurView();
+		private preViewBack(ui:BasicView):void{
+			this.hideView(ui);
 		}
 
 		private hideView(v: BasicView): void {
@@ -156,11 +170,15 @@ module view {
 			}
 		}
 
-		private showCurView(): void {
-			if (this.curView) {
-				utils.OBJ.setposition(null, this.curView, this.stage.stageWidth, 0, 1, 0);
-				this.addChildAt(this.curView, 1);
-				utils.TweenMe.to(this.curView, { x: 0, alpha: 1 }, 0.45);
+		private showView(v:BasicView,b:boolean=false): void {
+			if (v) {
+				utils.OBJ.setposition(null, v, this.stage.stageWidth, 0, 1, 0);
+				if(!b){
+					this.addChildAt(v, 1);
+				}else{
+					this.addChild(v);
+				}
+				utils.TweenMe.to(v, { x: 0, alpha: 1 }, 0.45);
 			}
 		}
 

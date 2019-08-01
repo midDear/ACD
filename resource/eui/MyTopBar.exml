@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="MyTopBar" width="750" height="128" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect id="bg" left="0" right="0" top="0" bottom="0" fillColor="0xcecece"/>
-	<e:Label id="back" text="&lt;" x="1" scaleY="2" anchorOffsetX="0" width="45.2" textAlign="center" textColor="0xffbd00" top="60"/>
-	<e:Label id="title" text="Label" horizontalCenter="0" width="320" textAlign="center" textColor="0xffbd00" top="65" size="36" height="50" verticalAlign="middle"/>
+	<e:Rect id="bg" left="0" right="0" top="0" bottom="0" fillColor="0xe5e5e5"/>
+	<e:Label id="back" text="&lt;" x="1" scaleY="2" anchorOffsetX="0" width="45.2" textAlign="center" textColor="0xffbd00" top="60" visible="false"/>
+	<e:Label id="label" text="Label" width="442" textAlign="center" textColor="0xffbd00" top="65" size="36" height="50" verticalAlign="middle" anchorOffsetX="0" horizontalCenter="0"/>
 </e:Skin>
