@@ -101,6 +101,15 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected createGameScene(): void {
-        this.addChild(new view.MainView());
+        var ui = new view.MainView();
+        this.addChild(ui);
+
+        this.stage.addEventListener(egret.Event.RESIZE,resize,this);
+
+        function resize(e:egret.Event):void{
+            ui.resize();
+        }
+
+
     }
 }

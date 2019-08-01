@@ -26,6 +26,10 @@ var view;
         }
         CommunityView.prototype.initUi = function () {
             this.resize(0, this.stage.stageHeight - 100);
+            this.initTitle();
+        };
+        CommunityView.prototype.initTitle = function () {
+            this.title["label"].text = "社区";
         };
         CommunityView.prototype.removeEvents = function () {
         };

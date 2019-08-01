@@ -36,7 +36,7 @@ var view;
             }
         };
         BasicView.prototype.childrenCreated = function () {
-            utils.T.trace("childrenCreated=", egret.getQualifiedClassName(this), this.height);
+            // utils.T.trace("childrenCreated=", egret.getQualifiedClassName(this), this.height);
             this.initUi();
             this.addEvents();
         };

@@ -20,6 +20,7 @@ module view {
 
 		private curView: BasicView;
 		private curIndex: number;
+		private preView: BasicView;
 
 		private userInfo: any;
 
@@ -113,9 +114,9 @@ module view {
 			utils.T.trace("jump-id=", id, this.curIndex);
 
 			if (id < 1) return;
-			this.mnav.visible = (id == 1||id>=5);
+			this.mnav.visible = (id == 1 || id >= 5);
 
-			if(id<=4) this.hideView(this.curView);
+			if (id <= 4) this.hideView(this.curView);
 
 			if (id == 1) {
 				if (!this.indexV) this.indexV = new IndexView();
@@ -132,39 +133,40 @@ module view {
 				this.curView = this.earmV;
 			} else {
 
-				var preV:BasicView;
 				if (id == 5) {
-					if (!this.earnRankV) this.earnRankV = new EarnRankLevelView((ui:BasicView)=>{this.preViewBack(ui)});
-					preV = this.earnRankV;
+					if (!this.earnRankV) this.earnRankV = new EarnRankLevelView((ui: BasicView) => { this.preViewBack(ui) });
+					this.preView = this.earnRankV;
 				} else if (id == 6) {
-					if (!this.whitePaperV) this.whitePaperV = new WhitePaperView((ui:BasicView)=>{this.preViewBack(ui)});
-					preV = this.whitePaperV;
+					if (!this.whitePaperV) this.whitePaperV = new WhitePaperView((ui: BasicView) => { this.preViewBack(ui) });
+					this.preView = this.whitePaperV;
 				} else if (id == 7) {
-					if (!this.faqV) this.faqV = new FAQView((ui:BasicView)=>{this.preViewBack(ui)});
-					preV= this.faqV;
+					if (!this.faqV) this.faqV = new FAQView((ui: BasicView) => { this.preViewBack(ui) });
+					this.preView = this.faqV;
 				} else if (id == 8) {
-					if (!this.userCenterV) this.userCenterV = new UserCenterView((ui:BasicView)=>{this.preViewBack(ui)});
-					preV = this.userCenterV;
+					if (!this.userCenterV) this.userCenterV = new UserCenterView((ui: BasicView) => { this.preViewBack(ui) });
+					this.preView = this.userCenterV;
 				}
 
-				this.showView(preV,true);
+				this.showView(this.preView, true);
 				return;
 			}
 
 			this.showView(this.curView);
 		}
 
-		private preViewBack(ui:BasicView):void{
-			this.hideView(ui,true);
+		private preViewBack(ui: BasicView): void {
+			this.hideView(ui, true);
+			this.curIndex = 1;
+			this.selectNav(this.curIndex);
 		}
 
-		private hideView(v: BasicView,b:boolean=false): void {
+		private hideView(v: BasicView, b: boolean = false): void {
 			if (v) {
 				let ui: BasicView = v;
 				v = null;
 				var fv = 1;
-				if(b) fv = -1;
-				utils.TweenMe.to(ui, { x: -this.stage.stageWidth*fv, alpha: 0 }, 0.25, 0, null, false, () => {
+				if (b) fv = -1;
+				utils.TweenMe.to(ui, { x: -this.stage.stageWidth * fv, alpha: 0 }, 0.25, 0, null, false, () => {
 					if (ui.parent) {
 						ui.parent.removeChild(ui);
 					}
@@ -172,12 +174,12 @@ module view {
 			}
 		}
 
-		private showView(v:BasicView,b:boolean=false): void {
+		private showView(v: BasicView, b: boolean = false): void {
 			if (v) {
 				utils.OBJ.setposition(null, v, this.stage.stageWidth, 0, 1, 0);
-				if(!b){
+				if (!b) {
 					this.addChildAt(v, 1);
-				}else{
+				} else {
 					this.addChild(v);
 				}
 				utils.TweenMe.to(v, { x: 0, alpha: 1 }, 0.45);
@@ -226,6 +228,36 @@ module view {
 
 			for (var i = 1; i <= 4; i++) {
 				this["nav" + i].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapNav, this);
+			}
+		}
+
+
+		public resize(w: number = 0, h: number = 0): void {
+			if (this.stage) {
+				this.width = this.stage.stageWidth;
+				this.height = this.stage.stageHeight;
+			}
+			if (w != 0) {
+				this.width = w;
+			}
+			if (h != 0) {
+				this.height = h;
+			}
+			if (this.curView) {
+				if(this.curView.stage){
+					this.curView.resize(0,this.stage.stageHeight-100);
+				}
+			}
+
+			if (this.preView) {
+				if(this.preView.stage){
+					this.preView.resize();
+				}
+			}
+			if (this.navConpane) {
+				if(this.navConpane.stage){
+					this.navConpane.resize();
+				}
 			}
 		}
 	}

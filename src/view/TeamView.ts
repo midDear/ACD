@@ -7,11 +7,7 @@ module view {
 	export class TeamView extends BasicView {
 
 
-		public label: eui.Component;
-		public time: eui.Label;
-		public shoyi: eui.Label;
-		public shudu: eui.Label;
-
+		public title: eui.Component;
 
 		private bf: Function;
 
@@ -23,8 +19,13 @@ module view {
 
 		protected initUi(): void {
 			this.resize(0, this.stage.stageHeight - 100);
+			this.initTitle();
 		}
 
+		private initTitle(): void {
+			this.title["back"].visible = true;
+			this.title["label"].text = "等级";
+		}
 		protected addEvents(): void {
 
 		}

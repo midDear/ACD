@@ -10,7 +10,7 @@ module view {
 			// this.childrenCreated();
 		}
 
-		protected resize(w: number = 0, h: number = 0): void {
+		public resize(w: number = 0, h: number = 0): void {
 			if (this.stage) {
 				this.width = this.stage.stageWidth;
 				this.height = this.stage.stageHeight;

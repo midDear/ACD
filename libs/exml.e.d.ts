@@ -94,6 +94,8 @@ declare class NavConpane extends eui.Skin{
 }
 declare class register extends eui.Skin{
 }
+declare class SelectCountryUi extends eui.Skin{
+}
 declare class TeamPage extends eui.Skin{
 }
 declare class UserCenterPage extends eui.Skin{

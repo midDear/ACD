@@ -13,7 +13,13 @@ class GetData {
 	}
 
 	public static userInfo(data,bf):void{
-		var path = Global.datas.userInfo;
+		var path = Global.datas.UserInfo;
+		RequestMethod.post(path,(data),bf);
+	}
+
+
+	public static signIn(data,bf):void{
+		var path = Global.datas.signIn;
 		RequestMethod.post(path,(data),bf);
 	}
 

@@ -45,6 +45,11 @@ var view;
                     }
                 }
             }
+            this.upData();
+        };
+        NavConpane.prototype.upData = function () {
+            this.user["account"].text = Global.datas.username + "(" + Global.datas.country + ")";
+            this.user["phone"].text = Global.datas.phone;
         };
         NavConpane.prototype.addEvents = function () {
             for (var i = 0; i <= 8; i++) {

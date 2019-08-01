@@ -42,10 +42,22 @@ var view;
                     password: this.password.text,
                 };
                 GetData.login(obj, function (code, res) {
-                    utils.T.trace("login", code == 1, code, res);
-                    if (code == 1) {
-                        if (_this.bf)
-                            _this.bf();
+                    res = JSON.parse(res);
+                    utils.T.trace("login", code == 1, code, res.code, res);
+                    if (code == 1 && res.code == 20000) {
+                        Global.datas.token = res.data.token;
+                        GetData.userInfo({}, function (code, res) {
+                            res = JSON.parse(res);
+                            utils.T.trace("userInfo", code == 1, code, res);
+                            if (code == 1 && res.code == 20000) {
+                                if (_this.bf)
+                                    _this.bf();
+                            }
+                            else {
+                            }
+                        });
+                    }
+                    else {
                     }
                 });
             }

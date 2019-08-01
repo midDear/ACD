@@ -6,7 +6,12 @@ module view {
  */
 	export class CommunityView extends BasicView {
 
-		
+		public title: eui.Component;
+		public label0: eui.Component;
+		public label1: eui.Component;
+		public label2: eui.Component;
+		public label3: eui.Component;
+
 
 		private bf: Function;
 
@@ -18,6 +23,11 @@ module view {
 
 		protected initUi(): void {
 			this.resize(0, this.stage.stageHeight - 100);
+
+			this.initTitle();
+		}
+		private initTitle(): void {
+			this.title["label"].text = "社区";
 		}
 
 		protected removeEvents(): void {

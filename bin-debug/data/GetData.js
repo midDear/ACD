@@ -13,7 +13,11 @@ var GetData = (function () {
         RequestMethod.post(path, (data), bf);
     };
     GetData.userInfo = function (data, bf) {
-        var path = Global.datas.userInfo;
+        var path = Global.datas.UserInfo;
+        RequestMethod.post(path, (data), bf);
+    };
+    GetData.signIn = function (data, bf) {
+        var path = Global.datas.signIn;
         RequestMethod.post(path, (data), bf);
     };
     return GetData;

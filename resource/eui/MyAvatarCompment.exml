@@ -2,7 +2,7 @@
 <e:Skin class="MyAvatarCompment" width="434" height="126" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
 	<e:Image x="32" y="54" source="icon_people_png"/>
-	<e:Label text="ACD(China)" y="54" right="10" left="112" height="34" verticalAlign="middle" textColor="0x333333"/>
-	<e:Label text="13888888888" y="86" right="10" left="112" textColor="0x333333" size="20" height="28" verticalAlign="middle"/>
+	<e:Label id="account" text="ACD(China)" y="54" right="10" left="112" height="34" verticalAlign="middle" textColor="0x333333"/>
+	<e:Label id="phone" text="13888888888" y="86" right="10" left="112" textColor="0x333333" size="20" height="28" verticalAlign="middle"/>
 	<e:Rect height="2" left="0" right="0" bottom="0" fillColor="0xd8d8d8"/>
 </e:Skin>

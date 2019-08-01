@@ -9,7 +9,8 @@
 	</e:Group>
 
 	<e:Label id="acd" text="1.068" x="158" y="314" anchorOffsetX="0" width="386" anchorOffsetY="0" height="108" textColor="0xEDA802" verticalAlign="middle" textAlign="center" size="95" bold="true" fontFamily="Arial"/>
-	<e:Label id="time" text="12:56:23" y="752" anchorOffsetX="140" width="280" anchorOffsetY="40" height="80" verticalAlign="middle" textAlign="center" size="52" horizontalCenter="0" textColor="0xffffff"/>
+	<e:Label id="time" text="12:56:23" y="752" anchorOffsetX="140" width="280" anchorOffsetY="40" height="80" verticalAlign="middle" textAlign="center" size="52" horizontalCenter="0" textColor="0xffffff" locked="true"/>
+	<e:Image id="signIn_btn" source="signIn_btn_png" y="597" horizontalCenter="0" touchEnabled="true"/>
 
 
 

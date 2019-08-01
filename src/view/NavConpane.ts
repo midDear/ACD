@@ -50,6 +50,13 @@ module view {
 					}
 				}
 			}
+
+			this.upData();
+		}
+
+		private upData():void{
+			this.user["account"].text = Global.datas.username+"("+Global.datas.country+")";
+			this.user["phone"].text = Global.datas.phone;
 		}
 
 		protected addEvents(): void {

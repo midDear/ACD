@@ -26,6 +26,10 @@ var view;
         }
         EarmView.prototype.initUi = function () {
             this.resize(0, this.stage.stageHeight - 100);
+            this.initTitle();
+        };
+        EarmView.prototype.initTitle = function () {
+            this.title["label"].text = "Earm ACD";
         };
         EarmView.prototype.addEvents = function () {
         };

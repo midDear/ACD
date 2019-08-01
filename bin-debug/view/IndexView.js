@@ -28,12 +28,13 @@ var view;
             var _this = this;
             this.resize(0, this.stage.stageHeight - 100);
             utils.T.trace("initUi");
+            this.upData();
             this.arcShape = new egret.Shape();
             var r = 140;
             this.arcShape.anchorOffsetX = r;
             this.arcShape.anchorOffsetY = r;
+            this.uptime(this.startTime);
             utils.OBJ.addToContainer(this, this.arcShape, this.width * 0.5, 752 + r);
-            var dd = 0;
             this.timeT = setInterval(function () {
                 if (_this.startTime >= 0) {
                     if (_this.startTime % 100000 == 0)
@@ -44,7 +45,11 @@ var view;
                     clearInterval(_this.timeT);
                 }
                 _this.startTime -= 1000;
+                Global.datas.surplusTime = _this.startTime;
             }, 1000);
+        };
+        IndexView.prototype.upData = function () {
+            this.acd.text = Global.datas.userInfo.balance;
         };
         IndexView.prototype.uptime = function (t) {
             var r = 140;
@@ -53,10 +58,20 @@ var view;
             this.arcShape.graphics.lineStyle(12, 0xffffff, 0.8, true);
             this.arcShape.graphics.drawArc(r, 0, r, -180 * Math.PI / 180, (dd - 180) * Math.PI / 180, true); //从起始点顺时针画弧到终点
         };
+        IndexView.prototype.tapSignIn_btn = function (e) {
+            GetData.signIn({}, function (code, res) {
+                res = JSON.parse(res);
+                if (code == 1 && res.code == 20000) {
+                    utils.T.trace("signIn-", res);
+                }
+            });
+        };
         IndexView.prototype.addEvents = function () {
+            this.signIn_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapSignIn_btn, this);
         };
         IndexView.prototype.removeEvents = function () {
             clearInterval(this.timeT);
+            this.signIn_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapSignIn_btn, this);
         };
         return IndexView;
     }(view.BasicView));

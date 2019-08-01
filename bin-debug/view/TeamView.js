@@ -26,6 +26,11 @@ var view;
         }
         TeamView.prototype.initUi = function () {
             this.resize(0, this.stage.stageHeight - 100);
+            this.initTitle();
+        };
+        TeamView.prototype.initTitle = function () {
+            this.title["back"].visible = true;
+            this.title["label"].text = "等级";
         };
         TeamView.prototype.addEvents = function () {
         };

@@ -7,11 +7,10 @@ module view {
 	export class EarmView extends BasicView {
 
 
-		public label: eui.Component;
+		public title: eui.Component;
 		public time: eui.Label;
 		public shoyi: eui.Label;
 		public shudu: eui.Label;
-
 
 		private bf: Function;
 
@@ -22,7 +21,12 @@ module view {
 		}
 
 		protected initUi(): void {
-			this.resize(0,this.stage.stageHeight-100);
+			this.resize(0, this.stage.stageHeight - 100);
+			this.initTitle();
+		}
+
+		private initTitle(): void {
+			this.title["label"].text = "Earm ACD";
 		}
 
 		protected addEvents(): void {

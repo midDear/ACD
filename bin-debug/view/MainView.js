@@ -108,34 +108,35 @@ var view;
                 this.curView = this.earmV;
             }
             else {
-                var preV;
                 if (id == 5) {
                     if (!this.earnRankV)
                         this.earnRankV = new view.EarnRankLevelView(function (ui) { _this.preViewBack(ui); });
-                    preV = this.earnRankV;
+                    this.preView = this.earnRankV;
                 }
                 else if (id == 6) {
                     if (!this.whitePaperV)
                         this.whitePaperV = new view.WhitePaperView(function (ui) { _this.preViewBack(ui); });
-                    preV = this.whitePaperV;
+                    this.preView = this.whitePaperV;
                 }
                 else if (id == 7) {
                     if (!this.faqV)
                         this.faqV = new view.FAQView(function (ui) { _this.preViewBack(ui); });
-                    preV = this.faqV;
+                    this.preView = this.faqV;
                 }
                 else if (id == 8) {
                     if (!this.userCenterV)
                         this.userCenterV = new view.UserCenterView(function (ui) { _this.preViewBack(ui); });
-                    preV = this.userCenterV;
+                    this.preView = this.userCenterV;
                 }
-                this.showView(preV, true);
+                this.showView(this.preView, true);
                 return;
             }
             this.showView(this.curView);
         };
         MainView.prototype.preViewBack = function (ui) {
             this.hideView(ui, true);
+            this.curIndex = 1;
+            this.selectNav(this.curIndex);
         };
         MainView.prototype.hideView = function (v, b) {
             if (b === void 0) { b = false; }
@@ -199,6 +200,35 @@ var view;
         MainView.prototype.removeEvents = function () {
             for (var i = 1; i <= 4; i++) {
                 this["nav" + i].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapNav, this);
+            }
+        };
+        MainView.prototype.resize = function (w, h) {
+            if (w === void 0) { w = 0; }
+            if (h === void 0) { h = 0; }
+            if (this.stage) {
+                this.width = this.stage.stageWidth;
+                this.height = this.stage.stageHeight;
+            }
+            if (w != 0) {
+                this.width = w;
+            }
+            if (h != 0) {
+                this.height = h;
+            }
+            if (this.curView) {
+                if (this.curView.stage) {
+                    this.curView.resize(0, this.stage.stageHeight - 100);
+                }
+            }
+            if (this.preView) {
+                if (this.preView.stage) {
+                    this.preView.resize();
+                }
+            }
+            if (this.navConpane) {
+                if (this.navConpane.stage) {
+                    this.navConpane.resize();
+                }
             }
         };
         return MainView;

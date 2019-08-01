@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="TeamPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui">
+<e:Skin class="TeamPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
-	<e:Component height="20" left="0" right="0" top="0" skinName="MyTopBar"/>
+	<e:Component id="title" height="128" left="0" right="0" top="0" skinName="MyTopBar"/>
 	<e:Group height="80" top="128" left="32" right="32">
 		<e:Group left="0" top="0" bottom="0" width="50%">
 			<e:Rect fillColor="0xffbd00" top="0" bottom="0" left="0" right="0"/>

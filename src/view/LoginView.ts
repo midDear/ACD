@@ -42,10 +42,25 @@ module view {
 				}
 
 				GetData.login(obj, (code, res) => {
-					utils.T.trace("login",code == 1, code, res);
+					res = JSON.parse(res);
+					utils.T.trace("login", code == 1, code, res.code, res);
 
-					if (code == 1) {
-						if (this.bf) this.bf();
+
+					if (code == 1 && res.code == 20000) {
+						Global.datas.token = res.data.token;
+
+						GetData.userInfo({}, (code, res) => {
+							res = JSON.parse(res);
+							utils.T.trace("userInfo", code == 1, code, res);
+
+							if (code == 1 && res.code == 20000) {
+								if (this.bf) this.bf();
+							} else {
+
+							}
+						});
+					} else {
+
 					}
 				})
 
