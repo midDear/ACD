@@ -4,10 +4,10 @@
 	<e:Component id="title" height="128" y="0" left="0" right="0" skinName="MyTopBar"/>
 	<e:Group height="200" left="32" right="32" top="168">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xffbd00"/>
-		<e:Image width="80" height="80" x="40" y="20" source="icon_home_sel_png"/>
 		<e:Label text="name: jake" x="140" y="34" textColor="0x555555" size="28" height="40" verticalAlign="middle"/>
 		<e:Label text="country China" x="140" y="80" textColor="0x555555" size="28" height="40" verticalAlign="middle"/>
 		<e:Label text="account: acd1234567" x="140" textColor="0x555555" size="28" height="40" verticalAlign="middle" bottom="34"/>
+		<e:Image x="20" y="40" source="icon_acd_circle_png"/>
 	</e:Group>
 	<e:Group left="156" right="156" height="88" bottom="226">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffbd00" ellipseWidth="16" ellipseHeight="16" enabled="true"/>

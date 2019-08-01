@@ -135,13 +135,17 @@ var view;
             this.showView(this.curView);
         };
         MainView.prototype.preViewBack = function (ui) {
-            this.hideView(ui);
+            this.hideView(ui, true);
         };
-        MainView.prototype.hideView = function (v) {
+        MainView.prototype.hideView = function (v, b) {
+            if (b === void 0) { b = false; }
             if (v) {
                 var ui_1 = v;
                 v = null;
-                utils.TweenMe.to(ui_1, { x: -this.stage.stageWidth, alpha: 0 }, 0.25, 0, null, false, function () {
+                var fv = 1;
+                if (b)
+                    fv = -1;
+                utils.TweenMe.to(ui_1, { x: -this.stage.stageWidth * fv, alpha: 0 }, 0.25, 0, null, false, function () {
                     if (ui_1.parent) {
                         ui_1.parent.removeChild(ui_1);
                     }
