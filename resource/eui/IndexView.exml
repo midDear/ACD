@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="IndexView" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffd000"/>
+	<e:Group width="484" height="222" y="257.58" horizontalCenter="-36" locked="true">
+		<e:Rect ellipseWidth="80" ellipseHeight="80" fillColor="0xFFBD00" left="0" right="0" bottom="0" top="16"/>
+		<e:Rect ellipseWidth="20" ellipseHeight="20" height="160" width="176" y="25.12" x="395.92" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Rect ellipseWidth="80" ellipseHeight="80" fillColor="0xFFFFFF" left="18" right="0" top="0" bottom="16"/>
+		<e:Image x="501.47" y="64.48" anchorOffsetX="0" anchorOffsetY="0" source="txt_mav_png"/>
+	</e:Group>
+
+	<e:Label id="acd" text="1.068" x="158" y="314" anchorOffsetX="0" width="386" anchorOffsetY="0" height="108" textColor="0xEDA802" verticalAlign="middle" textAlign="center" size="95" bold="true" fontFamily="Arial"/>
+	<e:Label id="time" text="12:56:23" y="752" anchorOffsetX="140" width="280" anchorOffsetY="40" height="80" textColor="0xEDA802" verticalAlign="middle" textAlign="center" size="52" horizontalCenter="0"/>
+
+
+
+
+
+
+
+</e:Skin>

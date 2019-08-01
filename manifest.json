@@ -22,6 +22,7 @@
 		"bin-debug/eventControl/Demo.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/libs/RequestMethod.js",
+		"bin-debug/ui/MyButton.js",
 		"bin-debug/utils/Config.js",
 		"bin-debug/utils/displayobjectBlink.js",
 		"bin-debug/utils/EffectUtils.js",
@@ -36,11 +37,13 @@
 		"bin-debug/utils/TweenMe.js",
 		"bin-debug/utils/upfile.js",
 		"bin-debug/Main.js",
+		"bin-debug/view/EarmView.js",
+		"bin-debug/view/FAQView.js",
 		"bin-debug/view/HomeView.js",
 		"bin-debug/view/IndexView.js",
 		"bin-debug/view/LoginView.js",
 		"bin-debug/view/MainView.js",
-		"bin-debug/view/MyButton.js",
-		"bin-debug/view/RegisterView.js"
+		"bin-debug/view/RegisterView.js",
+		"bin-debug/view/UserCenterView.js"
 	]
 }

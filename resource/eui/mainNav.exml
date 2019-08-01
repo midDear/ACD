@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="mainNav" width="187.5" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+	<e:Image id="icon" horizontalCenter="0" source="icon_home_png" verticalCenter="-14"/>
+	<e:Label id="label" text="首页" horizontalCenter="0" size="20" textColor="0xFFBD00" bottom="14"/>
+</e:Skin>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CommunityView" width="750" height="1334" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+	<e:Component id="label" height="128" y="0" left="0" right="0" skinName="MyTopBar"/>
+	<e:Component id="label0" height="116" y="140.32" skinName="MyCommunityItemCompment" width="686" horizontalCenter="0"/>
+	<e:Component id="label1" height="116" y="276" skinName="MyCommunityItemCompment" width="686" x="32"/>
+	<e:Component id="label2" height="116" y="411" skinName="MyCommunityItemCompment" width="686" x="32"/>
+	<e:Component id="label3" height="116" y="546.38" skinName="MyCommunityItemCompment" width="686" horizontalCenter="0"/>
+	<e:Button label="Button" skinName="skins.MyButton2Skin" width="360" height="80" horizontalCenter="0" bottom="40"/>
+</e:Skin>
