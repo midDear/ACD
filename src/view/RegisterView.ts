@@ -6,7 +6,9 @@ module view {
  */
 	export class RegisterView extends BasicView {
 
+		public input_country_pan: eui.Group;
 		public country: eui.Label;
+		public arrow: eui.Image;
 		public user_phone: eui.EditableText;
 		public user_name: eui.EditableText;
 		public account: eui.EditableText;
@@ -14,8 +16,9 @@ module view {
 		public invitation_code: eui.EditableText;
 		public register: eui.Button;
 		public back: eui.Label;
-
-
+		public slePane: eui.Group;
+		public list_pan: eui.Scroller;
+		public list: eui.List;
 
 
 
@@ -31,10 +34,6 @@ module view {
 
 		}
 
-		protected addEvents(): void {
-			this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
-			this.register.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
-		}
 
 		private tapBack(e: egret.TouchEvent): void {
 			this.gc();
@@ -96,10 +95,33 @@ module view {
 			})
 		}
 
+		private tapSle(e: egret.TouchEvent=null): void {
+			this.slePane.visible = !this.slePane.visible;
+			this.arrow.scaleY = -this.arrow.scaleY;
+		}
+		private changeCountry(e: egret.Event): void {
+			utils.T.trace("changeCountry", this.list.selectedIndex, this.list.selectedItem);
+			this.country.text = this.list.selectedItem.name;
+
+			this.tapSle();
+		}
+
+
+		protected addEvents(): void {
+			this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
+			this.register.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+
+			this.input_country_pan.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapSle, this);
+
+			this.list.addEventListener(egret.Event.CHANGE, this.changeCountry, this);
+		}
+
 
 		protected removeEvents(): void {
 			this.back.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 			this.register.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+			this.input_country_pan.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapSle, this);
+			this.list.removeEventListener(egret.Event.CHANGE, this.changeCountry, this);
 		}
 
 		public gc(b: boolean = false): void {

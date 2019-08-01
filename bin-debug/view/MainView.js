@@ -135,11 +135,8 @@ var view;
         };
         MainView.prototype.preViewBack = function (ui) {
             this.hideView(ui, true);
-<<<<<<< HEAD
             this.curIndex = 1;
             this.selectNav(this.curIndex);
-=======
->>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
         };
         MainView.prototype.hideView = function (v, b) {
             if (b === void 0) { b = false; }
@@ -231,6 +228,11 @@ var view;
             if (this.navConpane) {
                 if (this.navConpane.stage) {
                     this.navConpane.resize();
+                }
+            }
+            if (this.homeV) {
+                if (this.homeV.stage) {
+                    this.homeV.resize();
                 }
             }
         };

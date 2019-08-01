@@ -50,6 +50,7 @@ var view;
                             res = JSON.parse(res);
                             utils.T.trace("userInfo", code == 1, code, res);
                             if (code == 1 && res.code == 20000) {
+                                Global.datas.userInfo = res.data;
                                 if (_this.bf)
                                     _this.bf();
                             }

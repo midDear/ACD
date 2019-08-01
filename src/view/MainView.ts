@@ -154,7 +154,6 @@ module view {
 			this.showView(this.curView);
 		}
 
-<<<<<<< HEAD
 		private preViewBack(ui: BasicView): void {
 			this.hideView(ui, true);
 			this.curIndex = 1;
@@ -162,24 +161,13 @@ module view {
 		}
 
 		private hideView(v: BasicView, b: boolean = false): void {
-=======
-		private preViewBack(ui:BasicView):void{
-			this.hideView(ui,true);
-		}
-
-		private hideView(v: BasicView,b:boolean=false): void {
->>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
 			if (v) {
 				let ui: BasicView = v;
 				v = null;
 				var fv = 1;
-<<<<<<< HEAD
+
 				if (b) fv = -1;
 				utils.TweenMe.to(ui, { x: -this.stage.stageWidth * fv, alpha: 0 }, 0.25, 0, null, false, () => {
-=======
-				if(b) fv = -1;
-				utils.TweenMe.to(ui, { x: -this.stage.stageWidth*fv, alpha: 0 }, 0.25, 0, null, false, () => {
->>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
 					if (ui.parent) {
 						ui.parent.removeChild(ui);
 					}
@@ -257,19 +245,25 @@ module view {
 				this.height = h;
 			}
 			if (this.curView) {
-				if(this.curView.stage){
-					this.curView.resize(0,this.stage.stageHeight-100);
+				if (this.curView.stage) {
+					this.curView.resize(0, this.stage.stageHeight - 100);
 				}
 			}
 
 			if (this.preView) {
-				if(this.preView.stage){
+				if (this.preView.stage) {
 					this.preView.resize();
 				}
 			}
 			if (this.navConpane) {
-				if(this.navConpane.stage){
+				if (this.navConpane.stage) {
 					this.navConpane.resize();
+				}
+			}
+
+			if (this.homeV) {
+				if (this.homeV.stage) {
+					this.homeV.resize();
 				}
 			}
 		}

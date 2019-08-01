@@ -27,10 +27,6 @@ var view;
         RegisterView.prototype.initUi = function () {
             this.resize();
         };
-        RegisterView.prototype.addEvents = function () {
-            this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
-            this.register.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
-        };
         RegisterView.prototype.tapBack = function (e) {
             this.gc();
         };
@@ -79,9 +75,27 @@ var view;
                 }
             });
         };
+        RegisterView.prototype.tapSle = function (e) {
+            if (e === void 0) { e = null; }
+            this.slePane.visible = !this.slePane.visible;
+            this.arrow.scaleY = -this.arrow.scaleY;
+        };
+        RegisterView.prototype.changeCountry = function (e) {
+            utils.T.trace("changeCountry", this.list.selectedIndex, this.list.selectedItem);
+            this.country.text = this.list.selectedItem.name;
+            this.tapSle();
+        };
+        RegisterView.prototype.addEvents = function () {
+            this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
+            this.register.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+            this.input_country_pan.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapSle, this);
+            this.list.addEventListener(egret.Event.CHANGE, this.changeCountry, this);
+        };
         RegisterView.prototype.removeEvents = function () {
             this.back.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
             this.register.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+            this.input_country_pan.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapSle, this);
+            this.list.removeEventListener(egret.Event.CHANGE, this.changeCountry, this);
         };
         RegisterView.prototype.gc = function (b) {
             var _this = this;

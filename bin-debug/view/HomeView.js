@@ -60,6 +60,30 @@ var view;
         };
         HomeView.prototype.registerBF = function () {
         };
+        HomeView.prototype.resize = function (w, h) {
+            if (w === void 0) { w = 0; }
+            if (h === void 0) { h = 0; }
+            if (this.stage) {
+                this.width = this.stage.stageWidth;
+                this.height = this.stage.stageHeight;
+            }
+            if (w != 0) {
+                this.width = w;
+            }
+            if (h != 0) {
+                this.height = h;
+            }
+            if (this.loginV) {
+                if (this.loginV.stage) {
+                    this.loginV.resize();
+                }
+            }
+            if (this.registerV) {
+                if (this.registerV.stage) {
+                    this.registerV.resize();
+                }
+            }
+        };
         HomeView.prototype.removeEvents = function () {
             if (this.loginV)
                 this.loginV.gc(true);

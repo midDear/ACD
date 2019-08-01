@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png,icon_grade_png,icon_people_png,icon_usercenter_png,icon_white_png,icon_faq_png,icon_mnav_png,icon_del_png,icon_level_png,icon_left_time_png,icon_a_png,icon_defatul_avatar_png,icon_add_png,icon_acd_circle_png,icon_acd_png",
+			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png,icon_grade_png,icon_people_png,icon_usercenter_png,icon_white_png,icon_faq_png,icon_mnav_png,icon_del_png,icon_level_png,icon_left_time_png,icon_a_png,icon_defatul_avatar_png,icon_add_png,icon_acd_circle_png,icon_acd_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,icon_arrow_png,signIn_btn_png,selected_png,border_png,header_png,thumb_pb_png,track_pb_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,track_sb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png",
 			"name": "preload"
 		}
 	],
@@ -179,26 +179,17 @@
 		{
 			"url": "assets/images/icon_level.png",
 			"type": "image",
-<<<<<<< HEAD
-			"url": "assets/images/icon_mnav.png"
-		},
-		{
-			"name": "signIn_btn_png",
-			"type": "image",
-			"url": "assets/images/signIn_btn.png"
-		},
-		{
-			"name": "icon_arrow_png",
-			"type": "image",
-			"url": "assets/images/icon_arrow.png"
-		}
-	],
-	"groups": [
-		{
-			"name": "preload",
-			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd2_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png,icon_grade_png,icon_people_png,icon_usercenter_png,icon_white_png,icon_faq_png,icon_mnav_png,signIn_btn_png,icon_arrow_png"
-=======
 			"name": "icon_level_png"
+		},
+		{
+			"url": "assets/images/signIn_btn.png",
+			"type": "image",
+			"name": "signIn_btn_png"
+		},
+		{
+			"url": "assets/images/icon_arrow.png",
+			"type": "image",
+			"name": "icon_arrow_png"
 		},
 		{
 			"url": "assets/images/icon_left_time.png",
@@ -216,25 +207,134 @@
 			"name": "icon_defatul_avatar_png"
 		},
 		{
-			"url": "eui/icon_defatul_avatar.png",
-			"type": "image",
-			"name": "icon_defatul_avatar2_png"
-		},
-		{
 			"url": "assets/images/icon_add.png",
 			"type": "image",
 			"name": "icon_add_png"
 		},
 		{
-			"name": "icon_acd_circle_png",
+			"url": "assets/images/icon_acd_circle.png",
 			"type": "image",
-			"url": "assets/images/icon_acd_circle.png"
+			"name": "icon_acd_circle_png"
 		},
 		{
-			"name": "icon_acd_png",
+			"url": "assets/images/icon_acd.png",
 			"type": "image",
-			"url": "assets/images/icon_acd.png"
->>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
+			"name": "icon_acd_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
 		}
 	]
 }
