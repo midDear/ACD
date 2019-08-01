@@ -50,6 +50,8 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
+declare class CommunityView extends eui.Skin{
+}
 declare class EarnPage extends eui.Skin{
 }
 declare class EarnRankLevelDetailPage extends eui.Skin{
@@ -71,6 +73,10 @@ declare class mainNav extends eui.Skin{
 declare class MainView extends eui.Skin{
 }
 declare class MyAvatarCompment extends eui.Skin{
+}
+declare module skins{
+	class MyButton2Skin extends eui.Skin{
+	}
 }
 declare module skins{
 	class MyButtonSkin extends eui.Skin{

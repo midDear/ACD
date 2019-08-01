@@ -6,7 +6,6 @@ module view {
  */
 	export class CommunityView extends BasicView {
 
-
 		
 
 		private bf: Function;
@@ -19,10 +18,6 @@ module view {
 
 		protected initUi(): void {
 			this.resize(0, this.stage.stageHeight - 100);
-		}
-
-		protected addEvents(): void {
-
 		}
 
 		protected removeEvents(): void {

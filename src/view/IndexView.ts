@@ -36,15 +36,16 @@ module view {
             var dd = 0;
             this.timeT = setInterval(() => {
 
-                this.startTime -= 1000;
+                
                 if (this.startTime >= 0) {
-                    this.uptime(this.startTime);
+                    if(this.startTime%100000==0) this.uptime(this.startTime);
                     this.time.text = utils.stringMethod.formatDuring(this.startTime);
                 } else {
                     clearInterval(this.timeT);
                 }
+                this.startTime -= 1000;
 
-            }, 100);
+            }, 1000);
         }
 
         private uptime(t): void {

@@ -57,15 +57,21 @@ var view;
                 this["nav" + i].touchEnabled = true;
                 this["nav" + i].name = i;
             }
+            this.mnav.name = "101";
             this.selectNav(1);
         };
         MainView.prototype.addEvents = function () {
             for (var i = 1; i <= 4; i++) {
                 this["nav" + i].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapNav, this);
             }
+            this.mnav.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapNav, this);
         };
         MainView.prototype.tapNav = function (e) {
             var id = Number(e.currentTarget.name);
+            if (id === 101) {
+                this.showNavp();
+                return;
+            }
             if (this.curIndex === id) {
                 return;
             }
@@ -74,13 +80,20 @@ var view;
             this.jumpPage(id);
         };
         MainView.prototype.jumpPage = function (id) {
-            this.hideCurView();
+            utils.T.trace("jump-id=", id, this.curIndex);
+            if (id < 1)
+                return;
+            this.mnav.visible = id == 1;
+            this.hideView(this.curView);
             if (id == 1) {
                 if (!this.indexV)
                     this.indexV = new view.IndexView();
                 this.curView = this.indexV;
             }
             else if (id == 2) {
+                if (!this.communityV)
+                    this.communityV = new view.CommunityView();
+                this.curView = this.communityV;
             }
             else if (id == 3) {
             }
@@ -92,6 +105,9 @@ var view;
             else if (id == 5) {
             }
             else if (id == 6) {
+                if (!this.whitePaperV)
+                    this.whitePaperV = new view.WhitePaperView();
+                this.curView = this.whitePaperV;
             }
             else if (id == 7) {
                 if (!this.faqV)
@@ -99,13 +115,16 @@ var view;
                 this.curView = this.faqV;
             }
             else if (id == 8) {
+                if (!this.userCenterV)
+                    this.userCenterV = new view.UserCenterView();
+                this.curView = this.userCenterV;
             }
             this.showCurView();
         };
-        MainView.prototype.hideCurView = function () {
-            if (this.curView) {
-                var ui_1 = this.curView;
-                this.curView = null;
+        MainView.prototype.hideView = function (v) {
+            if (v) {
+                var ui_1 = v;
+                v = null;
                 utils.TweenMe.to(ui_1, { x: -this.stage.stageWidth, alpha: 0 }, 0.25, 0, null, false, function () {
                     if (ui_1.parent) {
                         ui_1.parent.removeChild(ui_1);
@@ -132,6 +151,24 @@ var view;
                     this["nav" + i].label.textColor = "0xC0C0C0";
                 }
             }
+        };
+        MainView.prototype.showNavp = function () {
+            var _this = this;
+            if (!this.navConpane) {
+                this.navConpane = new view.NavConpane(function (id) {
+                    _this.hideNavp();
+                    if (_this.curIndex != id) {
+                        _this.curIndex = id;
+                        _this.selectNav(id);
+                        _this.jumpPage(id);
+                    }
+                });
+            }
+            utils.OBJ.setposition(this, this.navConpane, -this.stage.stageWidth, 0, 1, 0);
+            utils.TweenMe.to(this.navConpane, { x: 0, alpha: 1 }, 0.45);
+        };
+        MainView.prototype.hideNavp = function () {
+            this.hideView(this.navConpane);
         };
         MainView.prototype.removeEvents = function () {
             for (var i = 1; i <= 4; i++) {

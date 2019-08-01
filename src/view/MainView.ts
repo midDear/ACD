@@ -14,10 +14,10 @@ module view {
 		private userCenterV: UserCenterView;
 		private communityV: CommunityView;
 
+		private navConpane: NavConpane;
+
 		private curView: BasicView;
 		private curIndex: number;
-
-		private mnav: any;
 
 		private userInfo: any;
 
@@ -25,6 +25,8 @@ module view {
 		public nav2: eui.Component;
 		public nav3: eui.Component;
 		public nav4: eui.Component;
+		public mnav: eui.Image;
+
 
 		private nav_data: any;
 
@@ -76,6 +78,7 @@ module view {
 				this["nav" + i].touchEnabled = true;
 				this["nav" + i].name = i;
 			}
+			this.mnav.name = "101";
 			this.selectNav(1);
 		}
 
@@ -83,10 +86,17 @@ module view {
 			for (var i = 1; i <= 4; i++) {
 				this["nav" + i].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapNav, this);
 			}
+
+			this.mnav.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapNav, this);
 		}
 
 		private tapNav(e: egret.TouchEvent): void {
 			let id = Number(e.currentTarget.name);
+
+			if (id === 101) {
+				this.showNavp();
+				return;
+			}
 
 			if (this.curIndex === id) {
 				return;
@@ -98,11 +108,17 @@ module view {
 
 		private jumpPage(id): void {
 
-			this.hideCurView();
+			utils.T.trace("jump-id=", id,this.curIndex);
+
+			if (id < 1) return;
+			this.mnav.visible = id == 1;
+
+			this.hideView(this.curView);
 
 			if (id == 1) {
 				if (!this.indexV) this.indexV = new IndexView();
 				this.curView = this.indexV;
+
 			} else if (id == 2) {
 				if (!this.communityV) this.communityV = new CommunityView();
 				this.curView = this.communityV;
@@ -125,14 +141,13 @@ module view {
 			}
 
 
-
 			this.showCurView();
 		}
 
-		private hideCurView(): void {
-			if (this.curView) {
-				let ui: BasicView = this.curView;
-				this.curView = null;
+		private hideView(v: BasicView): void {
+			if (v) {
+				let ui: BasicView = v;
+				v = null;
 				utils.TweenMe.to(ui, { x: -this.stage.stageWidth, alpha: 0 }, 0.25, 0, null, false, () => {
 					if (ui.parent) {
 						ui.parent.removeChild(ui);
@@ -160,6 +175,27 @@ module view {
 				}
 
 			}
+		}
+
+		private showNavp() {
+			if (!this.navConpane) {
+				this.navConpane = new NavConpane((id) => {
+
+					this.hideNavp();
+					if (this.curIndex != id) {
+						this.curIndex = id;
+						this.selectNav(id);
+						this.jumpPage(id);
+					}
+				});
+			}
+			utils.OBJ.setposition(this, this.navConpane, -this.stage.stageWidth, 0, 1, 0);
+			utils.TweenMe.to(this.navConpane, { x: 0, alpha: 1 }, 0.45);
+
+		}
+
+		private hideNavp(): void {
+			this.hideView(this.navConpane);
 		}
 
 

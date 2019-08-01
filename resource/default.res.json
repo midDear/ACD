@@ -144,12 +144,42 @@
 			"name": "icon_chat_off_png",
 			"type": "image",
 			"url": "assets/images/icon_chat_off.png"
+		},
+		{
+			"name": "icon_grade_png",
+			"type": "image",
+			"url": "assets/images/icon_grade.png"
+		},
+		{
+			"name": "icon_people_png",
+			"type": "image",
+			"url": "assets/images/icon_people.png"
+		},
+		{
+			"name": "icon_usercenter_png",
+			"type": "image",
+			"url": "assets/images/icon_usercenter.png"
+		},
+		{
+			"name": "icon_white_png",
+			"type": "image",
+			"url": "assets/images/icon_white.png"
+		},
+		{
+			"name": "icon_faq_png",
+			"type": "image",
+			"url": "assets/images/icon_faq.png"
+		},
+		{
+			"name": "icon_mnav_png",
+			"type": "image",
+			"url": "assets/images/icon_mnav.png"
 		}
 	],
 	"groups": [
 		{
 			"name": "preload",
-			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd2_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png"
+			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd2_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png,icon_grade_png,icon_people_png,icon_usercenter_png,icon_white_png,icon_faq_png,icon_mnav_png"
 		}
 	]
 }

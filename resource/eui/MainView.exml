@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="MainView" width="750" height="1334" xmlns:e="http://ns.egret.com/eui">
-	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFD000"/>
-	<e:Group x="0" y="0" anchorOffsetX="0" width="148" anchorOffsetY="0" height="156">
-		<e:Rect width="60" height="60" x="32" y="54" ellipseWidth="60" ellipseHeight="60" fillColor="0xFFFFFF"/>
-		<e:Image source="icon_home_sel_png" fillMode="scale" x="0" y="0"/>
-	</e:Group>
+<e:Skin class="MainView" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFD000" locked="true"/>
 	<e:Component id="nav1" width="187.5" height="100" skinName="mainNav" bottom="0" x="0"/>
 	<e:Component id="nav2" width="187.5" height="100" skinName="mainNav" x="187" bottom="0"/>
 	<e:Component id="nav3" width="187.5" height="100" skinName="mainNav" x="375" bottom="0"/>
 	<e:Component id="nav4" width="187.5" height="100" skinName="mainNav" bottom="0" x="562.5"/>
+	<e:Image id="mnav" x="32" y="54" source="icon_mnav_png" touchEnabled="true"/>
 </e:Skin>

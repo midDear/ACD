@@ -35,15 +35,16 @@ var view;
             utils.OBJ.addToContainer(this, this.arcShape, this.width * 0.5, 752 + r);
             var dd = 0;
             this.timeT = setInterval(function () {
-                _this.startTime -= 1000;
                 if (_this.startTime >= 0) {
-                    _this.uptime(_this.startTime);
+                    if (_this.startTime % 100000 == 0)
+                        _this.uptime(_this.startTime);
                     _this.time.text = utils.stringMethod.formatDuring(_this.startTime);
                 }
                 else {
                     clearInterval(_this.timeT);
                 }
-            }, 100);
+                _this.startTime -= 1000;
+            }, 1000);
         };
         IndexView.prototype.uptime = function (t) {
             var r = 140;
