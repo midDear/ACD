@@ -154,6 +154,7 @@ module view {
 			this.showView(this.curView);
 		}
 
+<<<<<<< HEAD
 		private preViewBack(ui: BasicView): void {
 			this.hideView(ui, true);
 			this.curIndex = 1;
@@ -161,12 +162,24 @@ module view {
 		}
 
 		private hideView(v: BasicView, b: boolean = false): void {
+=======
+		private preViewBack(ui:BasicView):void{
+			this.hideView(ui,true);
+		}
+
+		private hideView(v: BasicView,b:boolean=false): void {
+>>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
 			if (v) {
 				let ui: BasicView = v;
 				v = null;
 				var fv = 1;
+<<<<<<< HEAD
 				if (b) fv = -1;
 				utils.TweenMe.to(ui, { x: -this.stage.stageWidth * fv, alpha: 0 }, 0.25, 0, null, false, () => {
+=======
+				if(b) fv = -1;
+				utils.TweenMe.to(ui, { x: -this.stage.stageWidth*fv, alpha: 0 }, 0.25, 0, null, false, () => {
+>>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
 					if (ui.parent) {
 						ui.parent.removeChild(ui);
 					}

@@ -54,6 +54,7 @@ module view {
 							utils.T.trace("userInfo", code == 1, code, res);
 
 							if (code == 1 && res.code == 20000) {
+								Global.datas.userInfo = res.data;
 								if (this.bf) this.bf();
 							} else {
 

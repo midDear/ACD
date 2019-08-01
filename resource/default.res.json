@@ -1,178 +1,185 @@
 {
+	"groups": [
+		{
+			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png,icon_grade_png,icon_people_png,icon_usercenter_png,icon_white_png,icon_faq_png,icon_mnav_png,icon_del_png,icon_level_png,icon_left_time_png,icon_a_png,icon_defatul_avatar_png,icon_add_png,icon_acd_circle_png,icon_acd_png",
+			"name": "preload"
+		}
+	],
 	"resources": [
 		{
-			"name": "icon_home_png",
+			"url": "assets/images/icon_home.png",
 			"type": "image",
-			"url": "assets/images/icon_home.png"
+			"name": "icon_home_png"
 		},
 		{
-			"name": "icon_home_sel_png",
+			"url": "assets/images/icon_home_sel.png",
 			"type": "image",
-			"url": "assets/images/icon_home_sel.png"
+			"name": "icon_home_sel_png"
 		},
 		{
-			"name": "icon_chat_png",
+			"url": "assets/images/icon_chat.png",
 			"type": "image",
-			"url": "assets/images/icon_chat.png"
+			"name": "icon_chat_png"
 		},
 		{
-			"name": "icon_hbo_png",
+			"url": "assets/images/icon_hbo.png",
 			"type": "image",
-			"url": "assets/images/icon_hbo.png"
+			"name": "icon_hbo_png"
 		},
 		{
-			"name": "icon_kull_png",
+			"url": "assets/images/icon_kull.png",
 			"type": "image",
-			"url": "assets/images/icon_kull.png"
+			"name": "icon_kull_png"
 		},
 		{
-			"name": "icon_meg_png",
+			"url": "assets/images/icon_meg.png",
 			"type": "image",
-			"url": "assets/images/icon_meg.png"
+			"name": "icon_meg_png"
 		},
 		{
-			"name": "icon_peo_png",
+			"url": "assets/images/icon_peo.png",
 			"type": "image",
-			"url": "assets/images/icon_peo.png"
+			"name": "icon_peo_png"
 		},
 		{
-			"name": "icon_ybo_png",
+			"url": "assets/images/icon_ybo.png",
 			"type": "image",
-			"url": "assets/images/icon_ybo.png"
+			"name": "icon_ybo_png"
 		},
 		{
-			"name": "logo1_png",
+			"url": "assets/images/logo1.png",
 			"type": "image",
-			"url": "assets/images/logo1.png"
+			"name": "logo1_png"
 		},
 		{
-			"name": "txt_acd_png",
+			"url": "assets/images/txt_acd.png",
 			"type": "image",
-			"url": "assets/images/txt_acd.png"
+			"name": "txt_acd_png"
 		},
 		{
-			"name": "txt_mav_png",
+			"url": "assets/images/txt_mav.png",
 			"type": "image",
-			"url": "assets/images/txt_mav.png"
+			"name": "txt_mav_png"
 		},
 		{
-			"name": "icon_acd_png",
+			"url": "assets/images/icon_acd_off.png",
 			"type": "image",
-			"url": "assets/images/icon_acd.png"
+			"name": "icon_acd_off_png"
 		},
 		{
-			"name": "icon_acd_off_png",
+			"url": "assets/images/icon_home_off.png",
 			"type": "image",
-			"url": "assets/images/icon_acd_off.png"
+			"name": "icon_home_off_png"
 		},
 		{
-			"name": "icon_home_off_png",
+			"url": "assets/images/icon_peo_off.png",
 			"type": "image",
-			"url": "assets/images/icon_home_off.png"
+			"name": "icon_peo_off_png"
 		},
 		{
-			"name": "icon_peo_off_png",
+			"url": "assets/images/icon_acd_off.png",
 			"type": "image",
-			"url": "assets/images/icon_peo_off.png"
+			"name": "icon_acd_off2_png"
 		},
 		{
-			"name": "icon_acd2_png",
+			"url": "assets/images/icon_chat.png",
 			"type": "image",
-			"url": "assets/images/icon_acd.png"
+			"name": "icon_chat2_png"
 		},
 		{
-			"name": "icon_acd_off2_png",
+			"url": "assets/images/icon_hbo.png",
 			"type": "image",
-			"url": "assets/images/icon_acd_off.png"
+			"name": "icon_hbo2_png"
 		},
 		{
-			"name": "icon_chat2_png",
+			"url": "assets/images/icon_home_off.png",
 			"type": "image",
-			"url": "assets/images/icon_chat.png"
+			"name": "icon_home_off2_png"
 		},
 		{
-			"name": "icon_hbo2_png",
+			"url": "assets/images/icon_kull.png",
 			"type": "image",
-			"url": "assets/images/icon_hbo.png"
+			"name": "icon_kull2_png"
 		},
 		{
-			"name": "icon_home_off2_png",
+			"url": "assets/images/icon_meg.png",
 			"type": "image",
-			"url": "assets/images/icon_home_off.png"
+			"name": "icon_meg2_png"
 		},
 		{
-			"name": "icon_kull2_png",
+			"url": "assets/images/icon_peo.png",
 			"type": "image",
-			"url": "assets/images/icon_kull.png"
+			"name": "icon_peo2_png"
 		},
 		{
-			"name": "icon_meg2_png",
+			"url": "assets/images/icon_peo_off.png",
 			"type": "image",
-			"url": "assets/images/icon_meg.png"
+			"name": "icon_peo_off2_png"
 		},
 		{
-			"name": "icon_peo2_png",
+			"url": "assets/images/icon_ybo.png",
 			"type": "image",
-			"url": "assets/images/icon_peo.png"
+			"name": "icon_ybo2_png"
 		},
 		{
-			"name": "icon_peo_off2_png",
+			"url": "assets/images/logo1.png",
 			"type": "image",
-			"url": "assets/images/icon_peo_off.png"
+			"name": "logo12_png"
 		},
 		{
-			"name": "icon_ybo2_png",
+			"url": "assets/images/txt_acd.png",
 			"type": "image",
-			"url": "assets/images/icon_ybo.png"
+			"name": "txt_acd2_png"
 		},
 		{
-			"name": "logo12_png",
+			"url": "assets/images/txt_mav.png",
 			"type": "image",
-			"url": "assets/images/logo1.png"
+			"name": "txt_mav2_png"
 		},
 		{
-			"name": "txt_acd2_png",
+			"url": "assets/images/icon_chat_off.png",
 			"type": "image",
-			"url": "assets/images/txt_acd.png"
+			"name": "icon_chat_off_png"
 		},
 		{
-			"name": "txt_mav2_png",
+			"url": "assets/images/icon_grade.png",
 			"type": "image",
-			"url": "assets/images/txt_mav.png"
+			"name": "icon_grade_png"
 		},
 		{
-			"name": "icon_chat_off_png",
+			"url": "assets/images/icon_people.png",
 			"type": "image",
-			"url": "assets/images/icon_chat_off.png"
+			"name": "icon_people_png"
 		},
 		{
-			"name": "icon_grade_png",
+			"url": "assets/images/icon_usercenter.png",
 			"type": "image",
-			"url": "assets/images/icon_grade.png"
+			"name": "icon_usercenter_png"
 		},
 		{
-			"name": "icon_people_png",
+			"url": "assets/images/icon_white.png",
 			"type": "image",
-			"url": "assets/images/icon_people.png"
+			"name": "icon_white_png"
 		},
 		{
-			"name": "icon_usercenter_png",
+			"url": "assets/images/icon_faq.png",
 			"type": "image",
-			"url": "assets/images/icon_usercenter.png"
+			"name": "icon_faq_png"
 		},
 		{
-			"name": "icon_white_png",
+			"url": "assets/images/icon_mnav.png",
 			"type": "image",
-			"url": "assets/images/icon_white.png"
+			"name": "icon_mnav_png"
 		},
 		{
-			"name": "icon_faq_png",
+			"url": "assets/images/icon_del.png",
 			"type": "image",
-			"url": "assets/images/icon_faq.png"
+			"name": "icon_del_png"
 		},
 		{
-			"name": "icon_mnav_png",
+			"url": "assets/images/icon_level.png",
 			"type": "image",
+<<<<<<< HEAD
 			"url": "assets/images/icon_mnav.png"
 		},
 		{
@@ -190,6 +197,44 @@
 		{
 			"name": "preload",
 			"keys": "icon_home_png,icon_home_sel_png,icon_chat_png,icon_hbo_png,icon_kull_png,icon_meg_png,icon_peo_png,icon_ybo_png,logo1_png,txt_acd_png,txt_mav_png,icon_acd_png,icon_acd_off_png,icon_home_off_png,icon_peo_off_png,icon_acd2_png,icon_acd_off2_png,icon_chat2_png,icon_hbo2_png,icon_home_off2_png,icon_kull2_png,icon_meg2_png,icon_peo2_png,icon_peo_off2_png,icon_ybo2_png,logo12_png,txt_acd2_png,txt_mav2_png,icon_chat_off_png,icon_grade_png,icon_people_png,icon_usercenter_png,icon_white_png,icon_faq_png,icon_mnav_png,signIn_btn_png,icon_arrow_png"
+=======
+			"name": "icon_level_png"
+		},
+		{
+			"url": "assets/images/icon_left_time.png",
+			"type": "image",
+			"name": "icon_left_time_png"
+		},
+		{
+			"url": "assets/images/icon_a.png",
+			"type": "image",
+			"name": "icon_a_png"
+		},
+		{
+			"url": "assets/images/icon_defatul_avatar.png",
+			"type": "image",
+			"name": "icon_defatul_avatar_png"
+		},
+		{
+			"url": "eui/icon_defatul_avatar.png",
+			"type": "image",
+			"name": "icon_defatul_avatar2_png"
+		},
+		{
+			"url": "assets/images/icon_add.png",
+			"type": "image",
+			"name": "icon_add_png"
+		},
+		{
+			"name": "icon_acd_circle_png",
+			"type": "image",
+			"url": "assets/images/icon_acd_circle.png"
+		},
+		{
+			"name": "icon_acd_png",
+			"type": "image",
+			"url": "assets/images/icon_acd.png"
+>>>>>>> e47b7e58bb30b0a07bea98968d652f9e0b1a4f19
 		}
 	]
 }
