@@ -24,9 +24,7 @@ module view {
 		}
 
 		protected childrenCreated(): void {
-
-			utils.T.trace("childrenCreated=", egret.getQualifiedClassName(this), this.height);
-
+			// utils.T.trace("childrenCreated=", egret.getQualifiedClassName(this), this.height);
 			this.initUi();
 			this.addEvents();
 		}
