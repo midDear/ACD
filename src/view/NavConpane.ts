@@ -55,8 +55,8 @@ module view {
 		}
 
 		private upData():void{
-			this.user["account"].text = Global.datas.username+"("+Global.datas.country+")";
-			this.user["phone"].text = Global.datas.phone;
+			this.user["account"].text = Global.datas.userInfo.username+"("+Global.datas.userInfo.country+")";
+			this.user["phone"].text = Global.datas.userInfo.phone;
 		}
 
 		protected addEvents(): void {

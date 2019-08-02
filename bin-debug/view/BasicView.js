@@ -40,6 +40,8 @@ var view;
             this.initUi();
             this.addEvents();
         };
+        BasicView.prototype.upData = function () {
+        };
         BasicView.prototype.initUi = function () {
         };
         BasicView.prototype.addEvents = function () {

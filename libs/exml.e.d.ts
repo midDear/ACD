@@ -52,6 +52,8 @@ declare module skins{
 }
 declare class CommunityView extends eui.Skin{
 }
+declare class DetailItem extends eui.Skin{
+}
 declare class EarnPage extends eui.Skin{
 }
 declare class EarnRankLevelDetailPage extends eui.Skin{
@@ -63,6 +65,8 @@ declare class FAQPage extends eui.Skin{
 declare class Home extends eui.Skin{
 }
 declare class IndexView extends eui.Skin{
+}
+declare class LevelItem extends eui.Skin{
 }
 declare class login extends eui.Skin{
 }
@@ -79,6 +83,10 @@ declare module skins{
 	}
 }
 declare module skins{
+	class MyButton3Skin extends eui.Skin{
+	}
+}
+declare module skins{
 	class MyButtonSkin extends eui.Skin{
 	}
 }
@@ -91,6 +99,8 @@ declare class MySilderItemCompnent extends eui.Skin{
 declare class MyTopBar extends eui.Skin{
 }
 declare class NavConpane extends eui.Skin{
+}
+declare class PeopleItem extends eui.Skin{
 }
 declare class register extends eui.Skin{
 }

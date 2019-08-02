@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="TeamPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
 	<e:Component id="title" height="128" left="0" right="0" top="0" skinName="MyTopBar"/>
 	<e:Group height="80" top="128" left="32" right="32">
-		<e:Group left="0" top="0" bottom="0" width="50%">
-			<e:Rect fillColor="0xffbd00" top="0" bottom="0" left="0" right="0"/>
-			<e:Label text="邀请你的人" left="0" right="0" top="0" bottom="0" verticalAlign="middle" textAlign="center" height="34" size="24"/>
+		<e:Group id="btn1" left="0" top="0" bottom="0" width="50%">
+			<e:Rect id="bg1" fillColor="0xffbd00" top="0" bottom="0" left="0" right="0"/>
+			<e:Label id="txt1" text="邀请你的人" left="0" right="0" top="0" bottom="0" verticalAlign="middle" textAlign="center" height="34" size="24"/>
 		</e:Group>
-		<e:Group top="0" bottom="0" width="50%" right="0">
-			<e:Rect top="0" bottom="0" left="0" right="0" fillColor="0xffffff"/>
-			<e:Label text="你邀请的人" left="0" right="0" top="0" bottom="0" verticalAlign="middle" textAlign="center" height="34" size="24" textColor="0xbdbdbd"/>
+		<e:Group id="btn2" top="0" bottom="0" width="50%" right="0">
+			<e:Rect id="bg2" top="0" bottom="0" left="0" right="0" fillColor="0xffffff"/>
+			<e:Label id="txt2" text="你邀请的人" left="0" right="0" top="0" bottom="0" verticalAlign="middle" textAlign="center" height="34" size="24" textColor="0xbdbdbd"/>
 		</e:Group>
 	</e:Group>
-	<e:Group top="208" left="32" right="32" bottom="0">
+	<e:Group top="208" left="32" right="32" bottom="0" locked="true">
 		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="4" strokeColor="0xffbd00" fillColor="0xffffff" scaleX="1" scaleY="1"/>
 		<e:Group height="100" left="108" right="108" top="40">
 			<e:Rect ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeColor="0xffbd00" fillColor="0xffffff" strokeWeight="2"/>
@@ -21,4 +21,7 @@
 			<e:Label text="English" verticalAlign="middle" textAlign="center" verticalCenter="0" size="16" height="22" right="98" textColor="0x888888"/>
 		</e:Group>
 	</e:Group>
+	<e:Scroller left="32" right="32" top="208" bottom="6">
+		<e:Group/>
+	</e:Scroller>
 </e:Skin>

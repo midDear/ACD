@@ -27,6 +27,7 @@ var view;
         EarmView.prototype.initUi = function () {
             this.resize(0, this.stage.stageHeight - 100);
             this.initTitle();
+            this.upData();
         };
         EarmView.prototype.initTitle = function () {
             this.title["label"].text = "Earm ACD";
@@ -34,6 +35,11 @@ var view;
         EarmView.prototype.addEvents = function () {
         };
         EarmView.prototype.removeEvents = function () {
+        };
+        EarmView.prototype.upData = function () {
+            this.time.text = "剩余时间" + utils.stringMethod.formatDuring(Global.datas.surplusTime);
+            this.shouyi.text = Global.datas.balanceInfo.base_profit + Global.datas.balanceInfo.extra_profit + "";
+            this.shudu.text = Global.datas.balanceInfo.speed + "ACD/hr";
         };
         EarmView.prototype.gc = function (b) {
             var _this = this;

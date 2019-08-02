@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="UserCenterPage" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xfbfbfb"/>
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xfbfbfb" locked="true"/>
 	<e:Component id="title" height="128" y="0" left="0" right="0" skinName="MyTopBar"/>
 	<e:Group height="200" left="32" right="32" top="168">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xffbd00"/>
-		<e:Label text="name: jake" x="140" y="34" textColor="0x555555" size="28" height="40" verticalAlign="middle"/>
-		<e:Label text="country China" x="140" y="80" textColor="0x555555" size="28" height="40" verticalAlign="middle"/>
-		<e:Label text="account: acd1234567" x="140" textColor="0x555555" size="28" height="40" verticalAlign="middle" bottom="34"/>
+		<e:Label text="name: " x="140" y="34" textColor="0x555555" size="28" height="40" verticalAlign="middle"/>
+		<e:Label text="country:" x="140" y="80" textColor="0x555555" size="28" height="40" verticalAlign="middle"/>
+		<e:Label text="account:" x="140" textColor="0x555555" size="28" height="40" verticalAlign="middle" bottom="34"/>
+		<e:Label id="name" text="" x="262.52" y="33.37" textColor="0x555555" size="28" height="40" verticalAlign="middle" anchorOffsetX="0" width="280"/>
+		<e:Label id="country" text="" x="262.52" y="79.38" textColor="0x555555" size="28" height="40" verticalAlign="middle" anchorOffsetX="0" width="280"/>
+		<e:Label id="account" text="" x="262.52" textColor="0x555555" size="28" height="40" verticalAlign="middle" anchorOffsetX="0" width="280" y="126.01"/>
 		<e:Image x="20" y="40" source="icon_acd_circle_png"/>
 	</e:Group>
-	<e:Group left="156" right="156" height="88" bottom="226">
-		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffbd00" ellipseWidth="16" ellipseHeight="16" enabled="true"/>
-		<e:Label text="密码修改" verticalCenter="0" horizontalCenter="0" verticalAlign="middle" textAlign="center" height="40" size="28"/>
-	</e:Group>
-	<e:Group left="156" right="156" height="88" bottom="98">
-		<e:Rect id="bg" ellipseWidth="40" ellipseHeight="40" width="100%" height="100%" fillColor="0xf0f0f0" enabled="true"/>
-		<e:Label text="密码修改" verticalCenter="0" horizontalCenter="0" verticalAlign="middle" textAlign="center" height="40" size="28" textColor="0x555555"/>
-	</e:Group>
+
+	<e:Button id="editPassword" label="修改密码" width="438" height="88" horizontalCenter="0" skinName="skins.MyButton2Skin" bottom="228" visible="false"/>
+	<e:Button id="quit" label="退出登入" width="438" height="88" horizontalCenter="0" skinName="skins.MyButton3Skin" bottom="100"/>
 </e:Skin>

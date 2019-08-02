@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LevelItem" width="686" height="80" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+	<e:Label id="level" text="Level 1" y="23" height="40" verticalAlign="middle" textColor="0xFFBD00" left="40"/>
+	<e:Label text="total" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="160"/>
+	<e:Label id="tatal" text="0" y="24" textColor="0x777777" size="24" height="34" verticalAlign="middle" left="215" anchorOffsetX="0" width="128"/>
+	<e:Label text=">" width="40" height="40" textColor="0xFFBD00" verticalAlign="middle" textAlign="center" verticalCenter="0" right="40" scaleY="2"/>
+</e:Skin>

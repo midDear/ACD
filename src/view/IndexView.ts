@@ -36,23 +36,48 @@ module view {
             this.uptime(this.startTime);
 
             utils.OBJ.addToContainer(this, this.arcShape, this.width * 0.5, 752 + r);
-            this.timeT = setInterval(() => {
-
-                if (this.startTime >= 0) {
-                    if (this.startTime % 100000 == 0) this.uptime(this.startTime);
-                    this.time.text = utils.stringMethod.formatDuring(this.startTime);
-                } else {
-                    clearInterval(this.timeT);
-                }
-                this.startTime -= 1000;
-                Global.datas.surplusTime = this.startTime;
-            }, 1000);
-
-
         }
 
-        private upData():void{
-            this.acd.text = Global.datas.userInfo.balance;
+        public upData(): void {
+            var str = Global.datas.balanceInfo.base_profit + Global.datas.balanceInfo.extra_profit+"";
+            this.acd.text = str.slice(0,str.indexOf(".")+3);
+            this.startTime = parseInt("" + Global.datas.balanceInfo.remain_time * 0.001) * 1000;
+
+            this.initTime();
+        }
+
+        private initTime(): void {
+            if (this.startTime > 0) {
+                this.signIn_btn.visible = false;
+
+                this.time.text = utils.stringMethod.formatDuring(this.startTime);
+                clearInterval(this.timeT);
+                this.timeT = setInterval(() => {
+                    this.upacd();
+                }, 1000);
+
+            } else {
+
+            }
+        }
+
+        private upacd(): void {
+            if (this.startTime >= 0) {
+                if (this.startTime % 100000 == 0) this.uptime(this.startTime);
+                this.time.text = utils.stringMethod.formatDuring(this.startTime);
+            } else {
+                clearInterval(this.timeT);
+            }
+            this.startTime -= 1000;
+            Global.datas.surplusTime = this.startTime;
+
+            GetData.getBalanceInfo({}, (code, res) => {
+					res = JSON.parse(res);
+					if (code == 1 && res.code == 20000) {
+						Global.datas.balanceInfo = res.data;
+                        this.upData();
+					}
+				});
         }
 
         private uptime(t): void {
@@ -61,15 +86,13 @@ module view {
             this.arcShape.graphics.clear();
             this.arcShape.graphics.lineStyle(12, 0xffffff, 0.8, true);
             this.arcShape.graphics.drawArc(r, 0, r, -180 * Math.PI / 180, (dd - 180) * Math.PI / 180, true);//从起始点顺时针画弧到终点
-
-
         }
 
-        private tapSignIn_btn(e:egret.TouchEvent):void{
-            GetData.signIn({},(code,res)=>{
+        private tapSignIn_btn(e: egret.TouchEvent): void {
+            GetData.signIn({}, (code, res) => {
                 res = JSON.parse(res);
-                if(code == 1&&res.code==20000){
-                    utils.T.trace("signIn-",res);
+                if (code == 1 && res.code == 20000) {
+                    utils.T.trace("signIn-", res);
                 }
             });
         }

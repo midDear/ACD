@@ -23,7 +23,6 @@ module view {
 		}
 
 		private initTitle(): void {
-			this.title["back"].visible = true;
 			this.title["label"].text = "等级";
 		}
 		protected addEvents(): void {

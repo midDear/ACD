@@ -9,7 +9,7 @@ module view {
 
 		public title: eui.Component;
 		public time: eui.Label;
-		public shoyi: eui.Label;
+		public shouyi: eui.Label;
 		public shudu: eui.Label;
 
 		private bf: Function;
@@ -23,6 +23,8 @@ module view {
 		protected initUi(): void {
 			this.resize(0, this.stage.stageHeight - 100);
 			this.initTitle();
+
+			this.upData();
 		}
 
 		private initTitle(): void {
@@ -35,6 +37,12 @@ module view {
 
 		protected removeEvents(): void {
 
+		}
+
+		public upData(): void {
+			this.time.text = "剩余时间" + utils.stringMethod.formatDuring(Global.datas.surplusTime);
+			this.shouyi.text = Global.datas.balanceInfo.base_profit+Global.datas.balanceInfo.extra_profit+"";
+			this.shudu.text = Global.datas.balanceInfo.speed+"ACD/hr";
 		}
 
 		public gc(b: boolean = false): void {

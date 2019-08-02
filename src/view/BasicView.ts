@@ -29,6 +29,8 @@ module view {
 			this.addEvents();
 		}
 
+		public upData(): void {
+		}
 		protected initUi(): void {
 
 		}

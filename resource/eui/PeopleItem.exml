@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PeopleItem" width="470" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeColor="0xFFBD00" fillColor="0xFFFFFF" strokeWeight="2"/>
+	<e:Image id="icon" width="80" height="80" verticalCenter="0" left="96" source="icon_defatul_avatar_png"/>
+	<e:Label id="account" text="Jack" verticalAlign="middle" textAlign="left" verticalCenter="0" size="24" textColor="0xFFBD00" height="34" left="200" anchorOffsetX="0" width="105"/>
+	<e:Label id="country" text="English" verticalAlign="middle" textAlign="left" verticalCenter="0" size="16" height="22" right="27" textColor="0x888888" anchorOffsetX="0" width="124"/>
+</e:Skin>

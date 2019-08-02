@@ -23,5 +23,10 @@ class GetData {
 		RequestMethod.post(path,(data),bf);
 	}
 
+	public static getBalanceInfo(data,bf):void{
+		var path = Global.datas.getBalanceInfo;
+		RequestMethod.post(path,(data),bf);
+	}
+
 
 }

@@ -29,12 +29,15 @@ var view;
         // 	this.addEvents();
         // }
         MainView.prototype.initUi = function () {
-            var _this = this;
             this.resize();
-            this.homeV = new view.HomeView(function () { _this.loginFinish(); });
-            utils.OBJ.setposition(this, this.homeV, 0, 30, 1, 0);
-            utils.TweenMe.to(this.homeV, { y: 0, alpha: 1 }, 0.45);
+            this.addHome();
             this.initNavs();
+        };
+        MainView.prototype.addHome = function () {
+            var _this = this;
+            this.homeV = new view.HomeView(function () { _this.loginFinish(); });
+            utils.OBJ.setposition(this, this.homeV, 0, 0, 1, 1);
+            // utils.TweenMe.to(this.homeV, { y: 0, alpha: 1 }, 0.45);
         };
         MainView.prototype.loginFinish = function () {
             utils.T.trace("loginFinish");
@@ -80,8 +83,8 @@ var view;
             this.jumpPage(id);
         };
         MainView.prototype.jumpPage = function (id) {
+            // utils.T.trace("jump-id=", id, this.curIndex);
             var _this = this;
-            utils.T.trace("jump-id=", id, this.curIndex);
             if (id < 1)
                 return;
             this.mnav.visible = (id == 1 || id >= 5);
@@ -133,10 +136,14 @@ var view;
             }
             this.showView(this.curView);
         };
-        MainView.prototype.preViewBack = function (ui) {
+        MainView.prototype.preViewBack = function (ui, res) {
+            if (res === void 0) { res = null; }
             this.hideView(ui, true);
             this.curIndex = 1;
             this.selectNav(this.curIndex);
+            if (res == "quit") {
+                this.addHome();
+            }
         };
         MainView.prototype.hideView = function (v, b) {
             if (b === void 0) { b = false; }
@@ -164,6 +171,7 @@ var view;
                     this.addChild(v);
                 }
                 utils.TweenMe.to(v, { x: 0, alpha: 1 }, 0.45);
+                v.upData();
             }
         };
         MainView.prototype.selectNav = function (index) {

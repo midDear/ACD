@@ -26,6 +26,58 @@ var view;
         }
         HomeView.prototype.initUi = function () {
             this.resize();
+            this.upData();
+        };
+        HomeView.prototype.upData = function () {
+            var _this = this;
+            var tk = window.localStorage.getItem("token");
+            if (tk != null) {
+                Global.datas.token = tk.slice(0, -2);
+                var _num_1 = 0;
+                GetData.getBalanceInfo({}, function (code, res) {
+                    res = JSON.parse(res);
+                    if (code == 1 && res.code == 20000) {
+                        Global.datas.balanceInfo = res.data;
+                        _num_1 += 1;
+                        if (_this.bf && _num_1 >= 2)
+                            _this.bf();
+                    }
+                    else {
+                        Global.datas.token = null;
+                    }
+                });
+                GetData.userInfo({}, function (code, res) {
+                    res = JSON.parse(res);
+                    if (code == 1 && res.code == 20000) {
+                        Global.datas.userInfo = res.data;
+                        _num_1 += 1;
+                        if (_this.bf && _num_1 >= 2)
+                            _this.bf();
+                    }
+                    else {
+                        Global.datas.token = null;
+                    }
+                });
+            }
+        };
+        HomeView.prototype.setLevels = function () {
+            var res = Global.datas.userInfo.children;
+            ;
+            var jieguo = [];
+            for (var i = 0; i < 10; i++) {
+                var arr = [];
+                var list;
+                if (i == 0) {
+                    list = res;
+                }
+                else {
+                    list = jieguo[i - 1];
+                }
+                for (var j = 0; j < list.length; j++) {
+                    arr.push(res);
+                }
+                jieguo.push(arr);
+            }
         };
         HomeView.prototype.addEvents = function () {
             this.login.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);

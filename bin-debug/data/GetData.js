@@ -20,6 +20,10 @@ var GetData = (function () {
         var path = Global.datas.signIn;
         RequestMethod.post(path, (data), bf);
     };
+    GetData.getBalanceInfo = function (data, bf) {
+        var path = Global.datas.getBalanceInfo;
+        RequestMethod.post(path, (data), bf);
+    };
     return GetData;
 }());
 __reflect(GetData.prototype, "GetData");

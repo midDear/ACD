@@ -45,9 +45,22 @@ module view {
 					res = JSON.parse(res);
 					utils.T.trace("login", code == 1, code, res.code, res);
 
+					let _num = 0;
 
 					if (code == 1 && res.code == 20000) {
 						Global.datas.token = res.data.token;
+						window.localStorage.setItem("token", res.data.token + "as");
+
+						GetData.getBalanceInfo({}, (code, res) => {
+							res = JSON.parse(res);
+							if (code == 1 && res.code == 20000) {
+								Global.datas.getBalanceInfo = res.data;
+								_num += 1;
+								if (this.bf && _num >= 2) this.bf();
+							} else {
+
+							}
+						})
 
 						GetData.userInfo({}, (code, res) => {
 							res = JSON.parse(res);
@@ -55,7 +68,8 @@ module view {
 
 							if (code == 1 && res.code == 20000) {
 								Global.datas.userInfo = res.data;
-								if (this.bf) this.bf();
+								_num += 1;
+								if (this.bf && _num >= 2) this.bf();
 							} else {
 
 							}

@@ -25,7 +25,6 @@ var view;
             return _this;
         }
         IndexView.prototype.initUi = function () {
-            var _this = this;
             this.resize(0, this.stage.stageHeight - 100);
             utils.T.trace("initUi");
             this.upData();
@@ -35,21 +34,45 @@ var view;
             this.arcShape.anchorOffsetY = r;
             this.uptime(this.startTime);
             utils.OBJ.addToContainer(this, this.arcShape, this.width * 0.5, 752 + r);
-            this.timeT = setInterval(function () {
-                if (_this.startTime >= 0) {
-                    if (_this.startTime % 100000 == 0)
-                        _this.uptime(_this.startTime);
-                    _this.time.text = utils.stringMethod.formatDuring(_this.startTime);
-                }
-                else {
-                    clearInterval(_this.timeT);
-                }
-                _this.startTime -= 1000;
-                Global.datas.surplusTime = _this.startTime;
-            }, 1000);
         };
         IndexView.prototype.upData = function () {
-            this.acd.text = Global.datas.userInfo.balance;
+            var str = Global.datas.balanceInfo.base_profit + Global.datas.balanceInfo.extra_profit + "";
+            this.acd.text = str.slice(0, str.indexOf(".") + 3);
+            this.startTime = parseInt("" + Global.datas.balanceInfo.remain_time * 0.001) * 1000;
+            this.initTime();
+        };
+        IndexView.prototype.initTime = function () {
+            var _this = this;
+            if (this.startTime > 0) {
+                this.signIn_btn.visible = false;
+                this.time.text = utils.stringMethod.formatDuring(this.startTime);
+                clearInterval(this.timeT);
+                this.timeT = setInterval(function () {
+                    _this.upacd();
+                }, 1000);
+            }
+            else {
+            }
+        };
+        IndexView.prototype.upacd = function () {
+            var _this = this;
+            if (this.startTime >= 0) {
+                if (this.startTime % 100000 == 0)
+                    this.uptime(this.startTime);
+                this.time.text = utils.stringMethod.formatDuring(this.startTime);
+            }
+            else {
+                clearInterval(this.timeT);
+            }
+            this.startTime -= 1000;
+            Global.datas.surplusTime = this.startTime;
+            GetData.getBalanceInfo({}, function (code, res) {
+                res = JSON.parse(res);
+                if (code == 1 && res.code == 20000) {
+                    Global.datas.balanceInfo = res.data;
+                    _this.upData();
+                }
+            });
         };
         IndexView.prototype.uptime = function (t) {
             var r = 140;

@@ -27,20 +27,36 @@ var view;
         UserCenterView.prototype.initUi = function () {
             this.resize();
             this.initTitle();
+            this.upData();
         };
         UserCenterView.prototype.initTitle = function () {
             this.title["back"].visible = true;
             this.title["label"].text = "个人中心";
         };
+        UserCenterView.prototype.upData = function () {
+            this.name.text = Global.datas.userInfo.real_name;
+            this.country.text = Global.datas.userInfo.country;
+            this.account.text = Global.datas.userInfo.username;
+        };
         UserCenterView.prototype.tapBack = function (e) {
-            if (this.bf)
-                this.bf(this);
+            if (e.currentTarget == this.title["back"]) {
+                if (this.bf)
+                    this.bf(this);
+            }
+            else if (e.currentTarget == this.quit) {
+                window.localStorage.removeItem("token");
+                Global.datas.userInfo = null;
+                if (this.bf)
+                    this.bf(this, "quit");
+            }
         };
         UserCenterView.prototype.addEvents = function () {
             this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
+            this.quit.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
         };
         UserCenterView.prototype.removeEvents = function () {
             this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
+            this.quit.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
         };
         UserCenterView.prototype.gc = function (b) {
             var _this = this;

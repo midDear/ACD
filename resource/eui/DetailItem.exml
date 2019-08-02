@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DetailItem" width="686" height="80" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" ellipseWidth="20" ellipseHeight="20" strokeWeight="2" strokeColor="0xFFBD00" fillColor="0xFBFBFB"/>
+	<e:Label id="account" text="jack(China)" size="24" height="34" verticalAlign="middle" verticalCenter="0" textColor="0x666666" anchorOffsetX="0" width="279" textAlign="center" horizontalCenter="0"/>
+	<e:Label text="邀请人数:" height="34" textAlign="center" right="80" scaleY="1" size="24" textColor="0xB8B8B8" verticalCenter="0" verticalAlign="middle"/>
+	<e:Label id="total" text="13人" height="34" textAlign="left" right="7" scaleY="1" size="24" textColor="0xB8B8B8" verticalCenter="0" verticalAlign="middle" anchorOffsetX="0" width="71"/>
+</e:Skin>

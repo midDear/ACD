@@ -7,10 +7,12 @@ module view {
 	export class CommunityView extends BasicView {
 
 		public title: eui.Component;
-		public label0: eui.Component;
-		public label1: eui.Component;
-		public label2: eui.Component;
-		public label3: eui.Component;
+		public com1: eui.Component;
+		public com2: eui.Component;
+		public com3: eui.Component;
+		public com4: eui.Component;
+		public addCommunity: eui.Button;
+
 
 
 		private bf: Function;

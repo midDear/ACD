@@ -6,17 +6,17 @@
 	<e:Group y="148" left="32" right="32" height="100">
 		<e:Rect fillColor="0xffffff" left="0" right="0" top="0" bottom="0"/>
 		<e:Image verticalCenter="0" left="20" source="icon_level_png"/>
-		<e:Label text="等级" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
+		<e:Label text="等级1" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
 	</e:Group>
 	<e:Group y="268" left="32" right="32" height="100">
 		<e:Rect fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0"/>
 		<e:Image verticalCenter="0" left="20" source="icon_left_time_png"/>
-		<e:Label id="time" text="剩余时间20:20:01" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
+		<e:Label id="time" text="剩余时间00:00:00" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
 	</e:Group>
 	<e:Group y="388" left="32" right="32" height="100">
 		<e:Rect fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0"/>
 		<e:Image width="40" height="40" verticalCenter="0" left="20" source="icon_a_png"/>
-		<e:Label id="shoyi" text="1.06783" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
+		<e:Label id="shouyi" text="0.00" size="28" height="40" verticalAlign="middle" left="82" right="20" verticalCenter="0" textColor="0x666666"/>
 	</e:Group>
 	<e:Group height="520" left="32" right="32" top="528">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>

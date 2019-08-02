@@ -29,7 +29,6 @@ var view;
             this.initTitle();
         };
         TeamView.prototype.initTitle = function () {
-            this.title["back"].visible = true;
             this.title["label"].text = "等级";
         };
         TeamView.prototype.addEvents = function () {

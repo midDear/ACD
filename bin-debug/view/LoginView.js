@@ -44,14 +44,28 @@ var view;
                 GetData.login(obj, function (code, res) {
                     res = JSON.parse(res);
                     utils.T.trace("login", code == 1, code, res.code, res);
+                    var _num = 0;
                     if (code == 1 && res.code == 20000) {
                         Global.datas.token = res.data.token;
+                        window.localStorage.setItem("token", res.data.token + "as");
+                        GetData.getBalanceInfo({}, function (code, res) {
+                            res = JSON.parse(res);
+                            if (code == 1 && res.code == 20000) {
+                                Global.datas.getBalanceInfo = res.data;
+                                _num += 1;
+                                if (_this.bf && _num >= 2)
+                                    _this.bf();
+                            }
+                            else {
+                            }
+                        });
                         GetData.userInfo({}, function (code, res) {
                             res = JSON.parse(res);
                             utils.T.trace("userInfo", code == 1, code, res);
                             if (code == 1 && res.code == 20000) {
                                 Global.datas.userInfo = res.data;
-                                if (_this.bf)
+                                _num += 1;
+                                if (_this.bf && _num >= 2)
                                     _this.bf();
                             }
                             else {

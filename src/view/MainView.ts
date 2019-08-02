@@ -49,11 +49,15 @@ module view {
 
 		protected initUi(): void {
 			this.resize();
-			this.homeV = new HomeView(() => { this.loginFinish(); });
-			utils.OBJ.setposition(this, this.homeV, 0, 30, 1, 0);
-			utils.TweenMe.to(this.homeV, { y: 0, alpha: 1 }, 0.45);
+			this.addHome();
 
 			this.initNavs();
+		}
+
+		private addHome():void{
+			this.homeV = new HomeView(() => { this.loginFinish(); });
+			utils.OBJ.setposition(this, this.homeV, 0, 0, 1, 1);
+			// utils.TweenMe.to(this.homeV, { y: 0, alpha: 1 }, 0.45);
 		}
 
 		private loginFinish(): void {
@@ -111,7 +115,7 @@ module view {
 
 		private jumpPage(id): void {
 
-			utils.T.trace("jump-id=", id, this.curIndex);
+			// utils.T.trace("jump-id=", id, this.curIndex);
 
 			if (id < 1) return;
 			this.mnav.visible = (id == 1 || id >= 5);
@@ -154,10 +158,14 @@ module view {
 			this.showView(this.curView);
 		}
 
-		private preViewBack(ui: BasicView): void {
+		private preViewBack(ui: BasicView,res:any=null): void {
 			this.hideView(ui, true);
 			this.curIndex = 1;
 			this.selectNav(this.curIndex);
+
+			if(res == "quit"){
+				this.addHome();
+			}
 		}
 
 		private hideView(v: BasicView, b: boolean = false): void {
@@ -184,6 +192,7 @@ module view {
 					this.addChild(v);
 				}
 				utils.TweenMe.to(v, { x: 0, alpha: 1 }, 0.45);
+				v.upData();
 			}
 		}
 
