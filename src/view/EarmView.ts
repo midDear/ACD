@@ -12,8 +12,6 @@ module view {
 		public shouyi: eui.Label;
 		public shudu: eui.Label;
 
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;

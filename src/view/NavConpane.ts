@@ -17,9 +17,6 @@ module view {
 
 		private nav_data: any;
 
-
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;

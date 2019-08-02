@@ -17,9 +17,10 @@ module view {
         private arcShape: egret.Shape;
 
 
-        public constructor() {
+        public constructor(_bf: Function = null) {
             super();
             this.skinName = "resource/eui/IndexView.exml";
+            this.bf = _bf;
         }
 
         protected initUi(): void {

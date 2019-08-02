@@ -11,8 +11,6 @@ module view {
 		private loginV: LoginView;
 		private registerV: RegisterView;
 
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.skinName = "resource/eui/Home.exml";

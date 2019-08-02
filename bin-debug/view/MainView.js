@@ -17,7 +17,8 @@ var view;
  */
     var MainView = (function (_super) {
         __extends(MainView, _super);
-        function MainView() {
+        function MainView(_bf) {
+            if (_bf === void 0) { _bf = null; }
             var _this = _super.call(this) || this;
             _this.skinName = "resource/eui/MainView.exml";
             return _this;

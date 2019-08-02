@@ -24,8 +24,6 @@ module view {
 
 		private childs: any = [];
 
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
@@ -66,7 +64,8 @@ module view {
 		private tapLevel(e: egret.TouchEvent): void {
 			var id = Number(e.currentTarget.name);
 			if (id >= 1) {
-				var ui = new ListContainer(null, this.childs[id - 1]);
+				var ui = new ListContainer();
+				ui.setData(this.childs[id - 1]);
 				this.addChild(ui);
 				utils.OBJ.setposition(this, ui, this.stage.stageWidth, 0, 1, 0);
 				utils.TweenMe.to(ui,{x:0,alpha:1},0.45);

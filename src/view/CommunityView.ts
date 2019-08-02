@@ -13,10 +13,6 @@ module view {
 		public com4: eui.Component;
 		public addCommunity: eui.Button;
 
-
-
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;

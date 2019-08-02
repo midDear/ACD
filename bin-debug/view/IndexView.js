@@ -17,11 +17,13 @@ var view;
  */
     var IndexView = (function (_super) {
         __extends(IndexView, _super);
-        function IndexView() {
+        function IndexView(_bf) {
+            if (_bf === void 0) { _bf = null; }
             var _this = _super.call(this) || this;
             _this.startTime = 24 * 60 * 660 * 1000;
             _this.timeT = 0;
             _this.skinName = "resource/eui/IndexView.exml";
+            _this.bf = _bf;
             return _this;
         }
         IndexView.prototype.initUi = function () {

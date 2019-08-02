@@ -5,7 +5,10 @@ module view {
  *
  */
 	export class BasicView extends eui.Component {
-		public constructor() {
+
+		protected bf: Function;
+
+		public constructor(_bf: Function = null) {
 			super();
 			// this.childrenCreated();
 		}

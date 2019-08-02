@@ -17,7 +17,8 @@ var view;
  */
     var BasicView = (function (_super) {
         __extends(BasicView, _super);
-        function BasicView() {
+        function BasicView(_bf) {
+            if (_bf === void 0) { _bf = null; }
             return _super.call(this) || this;
             // this.childrenCreated();
         }

@@ -13,8 +13,6 @@ module view {
 		public editPassword: eui.Button;
 		public quit: eui.Button;
 
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;

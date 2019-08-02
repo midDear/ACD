@@ -51,7 +51,8 @@ var view;
         EarnRankLevelView.prototype.tapLevel = function (e) {
             var id = Number(e.currentTarget.name);
             if (id >= 1) {
-                var ui = new view.ListContainer(null, this.childs[id - 1]);
+                var ui = new view.ListContainer();
+                ui.setData(this.childs[id - 1]);
                 this.addChild(ui);
                 utils.OBJ.setposition(this, ui, this.stage.stageWidth, 0, 1, 0);
                 utils.TweenMe.to(ui, { x: 0, alpha: 1 }, 0.45);

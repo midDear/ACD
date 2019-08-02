@@ -33,7 +33,7 @@ module view {
 
 		private nav_data: any;
 
-		public constructor() {
+		public constructor(_bf:Function=null) {
 			super();
 			this.skinName = "resource/eui/MainView.exml";
 

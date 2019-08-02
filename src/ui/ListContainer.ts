@@ -4,13 +4,16 @@ module view {
 		public list_container: eui.Group;
 
 		private msg: any;
-		private bf: Function;
 
-		public constructor(_bf: Function = null, _msg: any = null) {
+		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
-			this.msg = _msg;
+
 			this.skinName = "resource/eui/EarnRankLevelDetailPage.exml";
+		}
+
+		public setData(_msg: any = null) {
+			this.msg = _msg;
 		}
 
 		protected initUi(): void {
@@ -33,12 +36,12 @@ module view {
 		protected addEvents(): void {
 			this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 
-			
+
 		}
 
 		protected removeEvents(): void {
 			this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
-			
+
 		}
 
 		public gc(b: boolean = false): void {

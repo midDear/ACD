@@ -10,8 +10,6 @@
 		public title: eui.Component;
 
 
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
