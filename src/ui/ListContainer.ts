@@ -10,7 +10,7 @@ module view {
 			super();
 			this.bf = _bf;
 			this.msg = _msg;
-			this.skinName = "resource/eui/EarnPage.exml";
+			this.skinName = "resource/eui/EarnRankLevelDetailPage.exml";
 		}
 
 		protected initUi(): void {
@@ -33,16 +33,12 @@ module view {
 		protected addEvents(): void {
 			this.title["back"].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
 
-			for (var i = 0; i <= 9; i++) {
-				if (this.childs.length > i) this["level" + i].addEventListener(egret.TouchEvent.TOUCH_TAP, this.tapLevel, this);
-			}
+			
 		}
 
 		protected removeEvents(): void {
 			this.title["back"].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
-			for (var i = 0; i <= 9; i++) {
-				if (this.childs.length > i) this["level" + i].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapLevel, this);
-			}
+			
 		}
 
 		public gc(b: boolean = false): void {
