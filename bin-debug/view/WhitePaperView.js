@@ -66,4 +66,3 @@ var view;
     view.WhitePaperView = WhitePaperView;
     __reflect(WhitePaperView.prototype, "view.WhitePaperView");
 })(view || (view = {}));
-//# sourceMappingURL=WhitePaperView.js.map

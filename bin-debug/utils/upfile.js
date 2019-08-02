@@ -105,4 +105,3 @@ var utils;
     }(egret.EventDispatcher));
     __reflect(upfile.prototype, "upfile");
 })(utils || (utils = {}));
-//# sourceMappingURL=upfile.js.map

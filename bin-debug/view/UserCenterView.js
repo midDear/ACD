@@ -20,8 +20,8 @@ var view;
         function UserCenterView(_bf) {
             if (_bf === void 0) { _bf = null; }
             var _this = _super.call(this) || this;
-            _this.bf = _bf;
             _this.skinName = "resource/eui/UserCenterPage.exml";
+            _this.bf = _bf;
             return _this;
         }
         UserCenterView.prototype.initUi = function () {
@@ -46,6 +46,7 @@ var view;
             else if (e.currentTarget == this.quit) {
                 window.localStorage.removeItem("token");
                 Global.datas.userInfo = null;
+                Global.datas.token = null;
                 if (this.bf)
                     this.bf(this, "quit");
             }
@@ -82,4 +83,3 @@ var view;
     view.UserCenterView = UserCenterView;
     __reflect(UserCenterView.prototype, "view.UserCenterView");
 })(view || (view = {}));
-//# sourceMappingURL=UserCenterView.js.map

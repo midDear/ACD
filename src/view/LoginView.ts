@@ -12,8 +12,6 @@ module view {
 		public password: eui.EditableText;
 		public back: eui.Label;
 
-		private bf: Function;
-
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
@@ -43,43 +41,46 @@ module view {
 
 				GetData.login(obj, (code, res) => {
 					res = JSON.parse(res);
-					utils.T.trace("login", code == 1, code, res.code, res);
-
-					let _num = 0;
+					// utils.T.trace("login", code == 1, code, res.code, res);
 
 					if (code == 1 && res.code == 20000) {
-						Global.datas.token = res.data.token;
-						window.localStorage.setItem("token", res.data.token + "as");
-
-						GetData.getBalanceInfo({}, (code, res) => {
-							res = JSON.parse(res);
-							if (code == 1 && res.code == 20000) {
-								Global.datas.getBalanceInfo = res.data;
-								_num += 1;
-								if (this.bf && _num >= 2) this.bf();
-							} else {
-
-							}
-						})
-
-						GetData.userInfo({}, (code, res) => {
-							res = JSON.parse(res);
-							utils.T.trace("userInfo", code == 1, code, res);
-
-							if (code == 1 && res.code == 20000) {
-								Global.datas.userInfo = res.data;
-								_num += 1;
-								if (this.bf && _num >= 2) this.bf();
-							} else {
-
-							}
-						});
+						this.getUserInfo(res);
 					} else {
 
 					}
 				})
 
 			}
+		}
+
+		private getUserInfo(res): void {
+			let _num = 0;
+			Global.datas.token = res.data.token;
+			window.localStorage.setItem("token", res.data.token + "as");
+
+			GetData.getBalanceInfo({}, (code, res) => {
+				res = JSON.parse(res);
+				if (code == 1 && res.code == 20000) {
+					Global.datas.balanceInfo = res.data;
+					_num += 1;
+					if (this.bf && _num >= 2) this.bf();
+				} else {
+
+				}
+			})
+
+			GetData.userInfo({}, (code, res) => {
+				res = JSON.parse(res);
+				utils.T.trace("userInfo", code == 1, code, res);
+
+				if (code == 1 && res.code == 20000) {
+					Global.datas.userInfo = res.data;
+					_num += 1;
+					if (this.bf && _num >= 2) this.bf();
+				} else {
+
+				}
+			});
 		}
 
 

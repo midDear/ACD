@@ -72,4 +72,3 @@ var RequestMethod = (function () {
     return RequestMethod;
 }());
 __reflect(RequestMethod.prototype, "RequestMethod");
-//# sourceMappingURL=RequestMethod.js.map

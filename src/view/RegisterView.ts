@@ -20,9 +20,6 @@ module view {
 		public list_pan: eui.Scroller;
 		public list: eui.List;
 
-
-
-		private bf: Function;
 		public constructor(_bf: Function = null) {
 			super();
 			this.bf = _bf;
@@ -32,6 +29,17 @@ module view {
 		protected initUi(): void {
 			this.resize();
 
+			this.initCountry();
+
+		}
+
+		private initCountry(): void {
+			var collection = new eui.ArrayCollection();
+			var data = Global.countrys();
+			for (var i = 0; i < data.length; i++) {
+				collection.addItem(data[i]);
+			}
+			this.list.dataProvider = collection;
 		}
 
 
@@ -72,36 +80,69 @@ module view {
 
 				return;
 			}
-			if (this.country.text.length < 2) {
+			if (this.country.text.length < 6) {
 
 				return;
 			}
 
-
 			var obj = {
-				username: this.user_name.text,
+				username: this.account.text,
 				password: this.password.text,
-				phone: this.user_phone.text,
+				phone: this.list.selectedItem.code + this.user_phone.text,
 				invite_name: this.invitation_code.text,
-				real_name: this.account.text,
-				country: this.country.text,
+				real_name: this.user_name.text,
+				country: this.list.selectedItem.name
 			}
 
 			GetData.register(obj, (code, res) => {
-				utils.T.trace("register", code, res);
+
+				// utils.T.trace("register", code, res);
 				if (code == 1) {
-					if (this.bf) this.bf();
+					res = JSON.parse(res);
+					if (res.code == 20000) {
+						this.getUserInfo(res);
+					}
 				}
 			})
 		}
+		
+		private getUserInfo(res): void {
+			let _num = 0;
+			Global.datas.token = res.data.token;
+			window.localStorage.setItem("token", res.data.token + "as");
 
-		private tapSle(e: egret.TouchEvent=null): void {
+			GetData.getBalanceInfo({}, (code, res) => {
+				res = JSON.parse(res);
+				if (code == 1 && res.code == 20000) {
+					Global.datas.balanceInfo = res.data;
+					_num += 1;
+					if (this.bf && _num >= 2) this.bf();
+				} else {
+
+				}
+			})
+
+			GetData.userInfo({}, (code, res) => {
+				res = JSON.parse(res);
+				utils.T.trace("userInfo", code == 1, code, res);
+
+				if (code == 1 && res.code == 20000) {
+					Global.datas.userInfo = res.data;
+					_num += 1;
+					if (this.bf && _num >= 2) this.bf();
+				} else {
+
+				}
+			});
+		}
+
+		private tapSle(e: egret.TouchEvent = null): void {
 			this.slePane.visible = !this.slePane.visible;
 			this.arrow.scaleY = -this.arrow.scaleY;
 		}
 		private changeCountry(e: egret.Event): void {
 			utils.T.trace("changeCountry", this.list.selectedIndex, this.list.selectedItem);
-			this.country.text = this.list.selectedItem.name;
+			this.country.text = this.list.selectedItem.name + "(" + this.list.selectedItem.code + ")";
 
 			this.tapSle();
 		}

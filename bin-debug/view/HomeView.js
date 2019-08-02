@@ -111,6 +111,8 @@ var view;
                 this.bf();
         };
         HomeView.prototype.registerBF = function () {
+            if (this.bf)
+                this.bf();
         };
         HomeView.prototype.resize = function (w, h) {
             if (w === void 0) { w = 0; }
@@ -149,4 +151,3 @@ var view;
     view.HomeView = HomeView;
     __reflect(HomeView.prototype, "view.HomeView");
 })(view || (view = {}));
-//# sourceMappingURL=HomeView.js.map

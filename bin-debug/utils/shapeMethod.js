@@ -353,4 +353,3 @@ var shapeMethod = (function () {
     return shapeMethod;
 }());
 __reflect(shapeMethod.prototype, "shapeMethod");
-//# sourceMappingURL=shapeMethod.js.map

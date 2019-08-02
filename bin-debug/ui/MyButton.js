@@ -29,4 +29,3 @@ var MyButton = (function (_super) {
     return MyButton;
 }(eui.Button));
 __reflect(MyButton.prototype, "MyButton");
-//# sourceMappingURL=MyButton.js.map

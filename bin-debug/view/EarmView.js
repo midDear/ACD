@@ -65,4 +65,3 @@ var view;
     view.EarmView = EarmView;
     __reflect(EarmView.prototype, "view.EarmView");
 })(view || (view = {}));
-//# sourceMappingURL=EarmView.js.map

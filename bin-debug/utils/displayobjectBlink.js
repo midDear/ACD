@@ -69,4 +69,3 @@ var displayobjectBlink = (function (_super) {
     return displayobjectBlink;
 }(egret.EventDispatcher));
 __reflect(displayobjectBlink.prototype, "displayobjectBlink");
-//# sourceMappingURL=displayobjectBlink.js.map

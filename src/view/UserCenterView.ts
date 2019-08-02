@@ -15,8 +15,8 @@ module view {
 
 		public constructor(_bf: Function = null) {
 			super();
-			this.bf = _bf;
 			this.skinName = "resource/eui/UserCenterPage.exml";
+			this.bf = _bf;
 		}
 
 		protected initUi(): void {
@@ -41,6 +41,7 @@ module view {
 			} else if (e.currentTarget == this.quit) {
 				window.localStorage.removeItem("token");
 				Global.datas.userInfo = null;
+				Global.datas.token = null;
 				if (this.bf) this.bf(this, "quit");
 			}
 		}

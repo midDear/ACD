@@ -144,4 +144,3 @@ var utils;
     utils.MoveControl = MoveControl;
     __reflect(MoveControl.prototype, "utils.MoveControl");
 })(utils || (utils = {}));
-//# sourceMappingURL=MoveControl.js.map

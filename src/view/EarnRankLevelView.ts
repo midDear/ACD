@@ -55,7 +55,7 @@ module view {
 				this["level" + i].touchEnabled = true;
 				this["level" + i].touchChildren = false;
 				if (this.childs.length > i) {
-					this["level" + i].tatal.text = this.childs[i].tatal + "";
+					//this["level" + i].tatal.text = this.childs[i].tatal + "";
 				}
 			}
 
@@ -68,7 +68,7 @@ module view {
 				ui.setData(this.childs[id - 1]);
 				this.addChild(ui);
 				utils.OBJ.setposition(this, ui, this.stage.stageWidth, 0, 1, 0);
-				utils.TweenMe.to(ui,{x:0,alpha:1},0.45);
+				utils.TweenMe.to(ui, { x: 0, alpha: 1 }, 0.45);
 			}
 		}
 

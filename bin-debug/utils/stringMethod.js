@@ -137,4 +137,3 @@ var utils;
     utils.stringMethod = stringMethod;
     __reflect(stringMethod.prototype, "utils.stringMethod");
 })(utils || (utils = {}));
-//# sourceMappingURL=stringMethod.js.map

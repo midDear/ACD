@@ -1,4 +1,4 @@
-	module view {
+module view {
 	/**
  * 输出语句
  * @author middear
@@ -26,8 +26,8 @@
 			this.title["label"].text = "白皮书";
 		}
 
-		private tapBack(e:egret.TouchEvent):void{
-			if(this.bf) this.bf(this);
+		private tapBack(e: egret.TouchEvent): void {
+			if (this.bf) this.bf(this);
 		}
 
 		protected addEvents(): void {

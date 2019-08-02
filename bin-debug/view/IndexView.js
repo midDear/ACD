@@ -58,6 +58,10 @@ var view;
         };
         IndexView.prototype.upacd = function () {
             var _this = this;
+            if (Global.datas.token == null) {
+                clearInterval(this.timeT);
+                return;
+            }
             if (this.startTime >= 0) {
                 if (this.startTime % 100000 == 0)
                     this.uptime(this.startTime);
@@ -84,10 +88,13 @@ var view;
             this.arcShape.graphics.drawArc(r, 0, r, -180 * Math.PI / 180, (dd - 180) * Math.PI / 180, true); //从起始点顺时针画弧到终点
         };
         IndexView.prototype.tapSignIn_btn = function (e) {
+            var _this = this;
             GetData.signIn({}, function (code, res) {
                 res = JSON.parse(res);
                 if (code == 1 && res.code == 20000) {
                     utils.T.trace("signIn-", res);
+                    _this.startTime = 24 * 60 * 660 * 1000;
+                    _this.initTime();
                 }
             });
         };
@@ -103,4 +110,3 @@ var view;
     view.IndexView = IndexView;
     __reflect(IndexView.prototype, "view.IndexView");
 })(view || (view = {}));
-//# sourceMappingURL=IndexView.js.map

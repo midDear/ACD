@@ -66,4 +66,3 @@ var view;
     view.FAQView = FAQView;
     __reflect(FAQView.prototype, "view.FAQView");
 })(view || (view = {}));
-//# sourceMappingURL=FAQView.js.map

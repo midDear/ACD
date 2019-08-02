@@ -40,8 +40,8 @@ module view {
         }
 
         public upData(): void {
-            var str = Global.datas.balanceInfo.base_profit + Global.datas.balanceInfo.extra_profit+"";
-            this.acd.text = str.slice(0,str.indexOf(".")+3);
+            var str = Global.datas.balanceInfo.base_profit + Global.datas.balanceInfo.extra_profit + "";
+            this.acd.text = str.slice(0, str.indexOf(".") + 3);
             this.startTime = parseInt("" + Global.datas.balanceInfo.remain_time * 0.001) * 1000;
 
             this.initTime();
@@ -63,6 +63,10 @@ module view {
         }
 
         private upacd(): void {
+            if (Global.datas.token == null){
+                clearInterval(this.timeT);
+                return;
+            }
             if (this.startTime >= 0) {
                 if (this.startTime % 100000 == 0) this.uptime(this.startTime);
                 this.time.text = utils.stringMethod.formatDuring(this.startTime);
@@ -73,12 +77,12 @@ module view {
             Global.datas.surplusTime = this.startTime;
 
             GetData.getBalanceInfo({}, (code, res) => {
-					res = JSON.parse(res);
-					if (code == 1 && res.code == 20000) {
-						Global.datas.balanceInfo = res.data;
-                        this.upData();
-					}
-				});
+                res = JSON.parse(res);
+                if (code == 1 && res.code == 20000) {
+                    Global.datas.balanceInfo = res.data;
+                    this.upData();
+                }
+            });
         }
 
         private uptime(t): void {
@@ -94,6 +98,9 @@ module view {
                 res = JSON.parse(res);
                 if (code == 1 && res.code == 20000) {
                     utils.T.trace("signIn-", res);
+
+                    this.startTime = 24 * 60 * 660 * 1000;
+                    this.initTime();
                 }
             });
         }

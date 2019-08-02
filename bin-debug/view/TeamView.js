@@ -59,4 +59,3 @@ var view;
     view.TeamView = TeamView;
     __reflect(TeamView.prototype, "view.TeamView");
 })(view || (view = {}));
-//# sourceMappingURL=TeamView.js.map

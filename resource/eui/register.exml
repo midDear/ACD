@@ -2,52 +2,43 @@
 <e:Skin class="register" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Rect left="-2" right="2" top="0" bottom="0" fillColor="0xffd000" width="750" height="1334" locked="true"/>
 	<e:Component width="420" height="150" y="252" skinName="Logo" horizontalCenter="0"/>
-	<e:Group id="input_country_pan" y="450" touchChildren="false" touchEnabled="true" horizontalCenter="0">
+	<e:Group id="input_country_pan" y="430" touchChildren="false" touchEnabled="true" horizontalCenter="0">
 		<e:Rect width="420" height="80" y="0" ellipseWidth="28" ellipseHeight="28" strokeColor="0xffffff" fillColor="0xffffff" x="0"/>
-		<e:Label id="country" text="国家" x="56" y="16" anchorOffsetX="0" width="256" anchorOffsetY="0" height="52" verticalAlign="middle" size="28" textColor="0xc0c0c0"/>
+		<e:Label id="country" text="国家" x="56" y="16" anchorOffsetX="0" width="302" anchorOffsetY="0" height="52" verticalAlign="middle" size="24" textColor="0xc0c0c0"/>
 		<e:Image id="arrow" source="icon_arrow_png" x="372.5" y="39.5" anchorOffsetX="20" anchorOffsetY="9.5"/>
 	</e:Group>
-	<e:Group y="550" width="420" height="80" horizontalCenter="0">
+	<e:Group y="530" width="420" height="80" horizontalCenter="0">
 		<e:Rect fillColor="0xffffff" ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeAlpha="0"/>
 		<e:EditableText id="user_phone" text="" top="5" bottom="5" right="20" left="62" size="28" promptColor="0xc0c0c0" prompt="输入手机号码" textColor="0xffd000" verticalAlign="middle"/>
 	</e:Group>
-	<e:Group y="650" width="420" height="80" horizontalCenter="0">
+	<e:Group y="630" width="420" height="80" horizontalCenter="0">
 		<e:Rect fillColor="0xFFFFFF" ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeAlpha="0"/>
 		<e:EditableText id="user_name" text="" top="5" bottom="5" right="20" left="62" size="28" promptColor="0xC0C0C0" prompt="输入真实姓名" textColor="0xFFD000" verticalAlign="middle"/>
 	</e:Group>
-	<e:Group y="750" width="420" height="80" horizontalCenter="0">
+	<e:Group y="730" width="420" height="80" horizontalCenter="0">
 		<e:Rect fillColor="0xFFFFFF" ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeAlpha="0"/>
 		<e:EditableText id="account" text="" top="5" bottom="5" right="20" left="62" size="28" promptColor="0xC0C0C0" prompt="输入昵称" textColor="0xFFD000" verticalAlign="middle"/>
 	</e:Group>
-	<e:Group y="850" width="420" height="80" horizontalCenter="0">
+	<e:Group y="830" width="420" height="80" horizontalCenter="0">
 		<e:Rect fillColor="0xFFFFFF" ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeAlpha="0"/>
 		<e:EditableText id="password" text="" top="5" bottom="5" right="20" left="62" size="28" promptColor="0xC0C0C0" prompt="输入密码" textColor="0xFFD000" verticalAlign="middle" displayAsPassword="true"/>
 	</e:Group>
-	<e:Group y="950" width="420" height="80" horizontalCenter="0">
+	<e:Group y="930" width="420" height="80" horizontalCenter="0">
 		<e:Rect fillColor="0xFFFFFF" ellipseWidth="20" ellipseHeight="20" left="0" right="0" top="0" bottom="0" strokeAlpha="0"/>
 		<e:EditableText id="invitation_code" text="" top="5" bottom="5" right="20" left="62" size="28" promptColor="0xC0C0C0" prompt="输入邀请码" textColor="0xFFD000" verticalAlign="middle"/>
 	</e:Group>
 	<e:Button id="register" label="提交注册" width="240" height="80" enabled="true" horizontalCenter="0" bottom="96" skinName="skins.MyButtonSkin"/>
-	<e:Label id="back" text="&lt;" x="0" y="0" scaleY="2" size="54" height="60" width="120" verticalAlign="middle" textAlign="center" touchEnabled="true"/>
-	<e:Group id="slePane" x="165" top="530" bottom="282" width="420" visible="false">
-		<e:Rect fillColor="0xFFFFFF" ellipseWidth="40" ellipseHeight="40" left="0" right="0" top="0" bottom="0" locked="true"/>
-		<e:Scroller id="list_pan" anchorOffsetX="0" width="420" anchorOffsetY="0" x="0" top="12" bottom="0">
+	<e:Label id="back" text="&lt;" x="0" y="-20" scaleY="2" size="54" height="60" width="120" verticalAlign="middle" textAlign="center" touchEnabled="true"/>
+	<e:Group id="slePane" x="165" top="510" bottom="272" width="420" visible="false">
+		<e:Rect fillColor="0xFFFFFF" ellipseWidth="40" ellipseHeight="40" left="0" right="0" top="-10" bottom="6" anchorOffsetY="0"/>
+		<e:Scroller id="list_pan" anchorOffsetX="0" width="420" anchorOffsetY="0" x="0" top="12" bottom="14">
 		<e:List id="list" width="420" height="513" anchorOffsetX="0" anchorOffsetY="0">
 			<e:itemRendererSkinName>
 			<e:Skin states="up,down,disabled" height="60" width="420">
-				<e:Label width="420" textAlign="center" size="36" text="{data.name+'('+data.num+')'}" textColor="0xC0C0C0" textColor.down="0xFFD000" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label width="420" textAlign="center" size="24" text="{data.name+'('+data.code+')'}" textColor="0xC0C0C0" textColor.down="0xFFD000" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 			</e:itemRendererSkinName>
-			<e:ArrayCollection>
-				<e:Array>
-				<e:Object name="afda" num="1"/>
-				<e:Object name="fasdcv" num="2"/>
-				<e:Object name="asdfas" num="3"/>
-				<e:Object name="cfasd" num="4"/>
-				<e:Object name="fasedrfsad" num="5"/>
-				<e:Object name="nufgndtll" num="6"/>
-				</e:Array>
-			</e:ArrayCollection>
+			
 		</e:List>
 		</e:Scroller>
 	</e:Group>

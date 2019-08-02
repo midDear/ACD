@@ -73,4 +73,3 @@ var view;
     view.BasicView = BasicView;
     __reflect(BasicView.prototype, "view.BasicView");
 })(view || (view = {}));
-//# sourceMappingURL=BasicView.js.map

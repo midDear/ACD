@@ -44,7 +44,7 @@ var view;
                 this["level" + i].touchEnabled = true;
                 this["level" + i].touchChildren = false;
                 if (this.childs.length > i) {
-                    this["level" + i].tatal.text = this.childs[i].tatal + "";
+                    //this["level" + i].tatal.text = this.childs[i].tatal + "";
                 }
             }
         };
@@ -100,4 +100,3 @@ var view;
     view.EarnRankLevelView = EarnRankLevelView;
     __reflect(EarnRankLevelView.prototype, "view.EarnRankLevelView");
 })(view || (view = {}));
-//# sourceMappingURL=EarnRankLevelView.js.map

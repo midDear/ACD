@@ -57,4 +57,3 @@ var view;
     view.CommunityView = CommunityView;
     __reflect(CommunityView.prototype, "view.CommunityView");
 })(view || (view = {}));
-//# sourceMappingURL=CommunityView.js.map

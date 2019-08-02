@@ -31,4 +31,3 @@ var utils;
     utils.MovieclipMethod = MovieclipMethod;
     __reflect(MovieclipMethod.prototype, "utils.MovieclipMethod");
 })(utils || (utils = {}));
-//# sourceMappingURL=MovieclipMethod.js.map

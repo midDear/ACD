@@ -117,4 +117,3 @@ var utils;
     utils.MyTimer = MyTimer;
     __reflect(MyTimer.prototype, "utils.MyTimer");
 })(utils || (utils = {}));
-//# sourceMappingURL=MyTimer.js.map

@@ -36,16 +36,17 @@ var view;
         };
         MainView.prototype.addHome = function () {
             var _this = this;
+            utils.T.trace("addHome");
+            this.curIndex = 0;
             this.homeV = new view.HomeView(function () { _this.loginFinish(); });
             utils.OBJ.setposition(this, this.homeV, 0, 0, 1, 1);
             // utils.TweenMe.to(this.homeV, { y: 0, alpha: 1 }, 0.45);
         };
         MainView.prototype.loginFinish = function () {
-            utils.T.trace("loginFinish");
             this.homeV.gc();
             this.homeV = null;
             this.jumpPage(1);
-            utils.TweenMe.to(this.indexV, { y: 0, alpha: 1 }, 0.45);
+            // utils.TweenMe.to(this.indexV, { y: 0, alpha: 1 }, 0.45);
         };
         MainView.prototype.initNavs = function () {
             this.nav_data = [
@@ -84,12 +85,12 @@ var view;
             this.jumpPage(id);
         };
         MainView.prototype.jumpPage = function (id) {
-            // utils.T.trace("jump-id=", id, this.curIndex);
             var _this = this;
+            utils.T.trace("jump-id=", id, this.curIndex);
             if (id < 1)
                 return;
             this.mnav.visible = (id == 1 || id >= 5);
-            if (id <= 4)
+            if (id <= 4 && this.curIndex != 0)
                 this.hideView(this.curView);
             if (id == 1) {
                 if (!this.indexV)
@@ -129,7 +130,10 @@ var view;
                 }
                 else if (id == 8) {
                     if (!this.userCenterV)
-                        this.userCenterV = new view.UserCenterView(function (ui) { _this.preViewBack(ui); });
+                        this.userCenterV = new view.UserCenterView(function (ui, res) {
+                            if (res === void 0) { res = null; }
+                            _this.preViewBack(ui, res);
+                        });
                     this.preView = this.userCenterV;
                 }
                 this.showView(this.preView, true);
@@ -250,4 +254,3 @@ var view;
     view.MainView = MainView;
     __reflect(MainView.prototype, "view.MainView");
 })(view || (view = {}));
-//# sourceMappingURL=MainView.js.map

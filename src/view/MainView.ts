@@ -33,7 +33,7 @@ module view {
 
 		private nav_data: any;
 
-		public constructor(_bf:Function=null) {
+		public constructor(_bf: Function = null) {
 			super();
 			this.skinName = "resource/eui/MainView.exml";
 
@@ -54,21 +54,20 @@ module view {
 			this.initNavs();
 		}
 
-		private addHome():void{
+		private addHome(): void {
+			utils.T.trace("addHome");
+			this.curIndex = 0;
 			this.homeV = new HomeView(() => { this.loginFinish(); });
 			utils.OBJ.setposition(this, this.homeV, 0, 0, 1, 1);
 			// utils.TweenMe.to(this.homeV, { y: 0, alpha: 1 }, 0.45);
 		}
 
 		private loginFinish(): void {
-			utils.T.trace("loginFinish")
 			this.homeV.gc();
 			this.homeV = null;
 
 			this.jumpPage(1);
-
-			utils.TweenMe.to(this.indexV, { y: 0, alpha: 1 }, 0.45);
-
+			// utils.TweenMe.to(this.indexV, { y: 0, alpha: 1 }, 0.45);
 		}
 
 		private initNavs(): void {
@@ -115,12 +114,12 @@ module view {
 
 		private jumpPage(id): void {
 
-			// utils.T.trace("jump-id=", id, this.curIndex);
+			utils.T.trace("jump-id=", id, this.curIndex);
 
 			if (id < 1) return;
 			this.mnav.visible = (id == 1 || id >= 5);
 
-			if (id <= 4) this.hideView(this.curView);
+			if (id <= 4&&this.curIndex!=0) this.hideView(this.curView);
 
 			if (id == 1) {
 				if (!this.indexV) this.indexV = new IndexView();
@@ -147,7 +146,7 @@ module view {
 					if (!this.faqV) this.faqV = new FAQView((ui: BasicView) => { this.preViewBack(ui) });
 					this.preView = this.faqV;
 				} else if (id == 8) {
-					if (!this.userCenterV) this.userCenterV = new UserCenterView((ui: BasicView) => { this.preViewBack(ui) });
+					if (!this.userCenterV) this.userCenterV = new UserCenterView((ui: BasicView,res: any = null) => { this.preViewBack(ui,res) });
 					this.preView = this.userCenterV;
 				}
 
@@ -158,12 +157,12 @@ module view {
 			this.showView(this.curView);
 		}
 
-		private preViewBack(ui: BasicView,res:any=null): void {
+		private preViewBack(ui: BasicView, res: any = null): void {
 			this.hideView(ui, true);
 			this.curIndex = 1;
 			this.selectNav(this.curIndex);
 
-			if(res == "quit"){
+			if (res == "quit") {
 				this.addHome();
 			}
 		}
@@ -229,10 +228,6 @@ module view {
 		private hideNavp(): void {
 			this.hideView(this.navConpane);
 		}
-
-
-
-
 
 		protected removeEvents(): void {
 

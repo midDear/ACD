@@ -98,4 +98,3 @@ var Demo = (function (_super) {
     return Demo;
 }(egret.DisplayObjectContainer));
 __reflect(Demo.prototype, "Demo");
-//# sourceMappingURL=Demo.js.map

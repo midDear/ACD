@@ -1,6 +1,6 @@
 {
-  "engineVersion": "5.2.16",
-  "compilerVersion": "5.2.16",
+  "engineVersion": "5.2.25",
+  "compilerVersion": "5.2.25",
   "template": {},
   "target": {
     "current": "web"
@@ -8,7 +8,7 @@
   "eui": {
     "exmlRoot": [
       "resource/eui_skins",
-      "resource/eui"
+        "resource/eui"
     ],
     "themes": [
       "resource/default.thm.json"

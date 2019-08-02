@@ -54,21 +54,21 @@ module view {
 			}
 		}
 
-		private setLevels():void{
+		private setLevels(): void {
 
 			var res = Global.datas.userInfo.children;;
 			var jieguo = [];
 
-			for(var i=0;i<10;i++){
+			for (var i = 0; i < 10; i++) {
 				var arr = [];
 				var list;
-				if(i ==0){
+				if (i == 0) {
 					list = res;
-				}else{
-					list = jieguo[i-1];
+				} else {
+					list = jieguo[i - 1];
 				}
 
-				for(var j=0;j<list.length;j++){
+				for (var j = 0; j < list.length; j++) {
 					arr.push(res)
 				}
 
@@ -110,7 +110,7 @@ module view {
 			if (this.bf) this.bf();
 		}
 		private registerBF(): void {		//注册成功
-
+			if (this.bf) this.bf();
 		}
 
 		public resize(w: number = 0, h: number = 0): void {

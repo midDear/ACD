@@ -263,4 +263,3 @@ var BC = (function () {
     return BC;
 }());
 __reflect(BC.prototype, "BC");
-//# sourceMappingURL=BC.js.map

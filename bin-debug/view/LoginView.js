@@ -43,39 +43,43 @@ var view;
                 };
                 GetData.login(obj, function (code, res) {
                     res = JSON.parse(res);
-                    utils.T.trace("login", code == 1, code, res.code, res);
-                    var _num = 0;
+                    // utils.T.trace("login", code == 1, code, res.code, res);
                     if (code == 1 && res.code == 20000) {
-                        Global.datas.token = res.data.token;
-                        window.localStorage.setItem("token", res.data.token + "as");
-                        GetData.getBalanceInfo({}, function (code, res) {
-                            res = JSON.parse(res);
-                            if (code == 1 && res.code == 20000) {
-                                Global.datas.getBalanceInfo = res.data;
-                                _num += 1;
-                                if (_this.bf && _num >= 2)
-                                    _this.bf();
-                            }
-                            else {
-                            }
-                        });
-                        GetData.userInfo({}, function (code, res) {
-                            res = JSON.parse(res);
-                            utils.T.trace("userInfo", code == 1, code, res);
-                            if (code == 1 && res.code == 20000) {
-                                Global.datas.userInfo = res.data;
-                                _num += 1;
-                                if (_this.bf && _num >= 2)
-                                    _this.bf();
-                            }
-                            else {
-                            }
-                        });
+                        _this.getUserInfo(res);
                     }
                     else {
                     }
                 });
             }
+        };
+        LoginView.prototype.getUserInfo = function (res) {
+            var _this = this;
+            var _num = 0;
+            Global.datas.token = res.data.token;
+            window.localStorage.setItem("token", res.data.token + "as");
+            GetData.getBalanceInfo({}, function (code, res) {
+                res = JSON.parse(res);
+                if (code == 1 && res.code == 20000) {
+                    Global.datas.balanceInfo = res.data;
+                    _num += 1;
+                    if (_this.bf && _num >= 2)
+                        _this.bf();
+                }
+                else {
+                }
+            });
+            GetData.userInfo({}, function (code, res) {
+                res = JSON.parse(res);
+                utils.T.trace("userInfo", code == 1, code, res);
+                if (code == 1 && res.code == 20000) {
+                    Global.datas.userInfo = res.data;
+                    _num += 1;
+                    if (_this.bf && _num >= 2)
+                        _this.bf();
+                }
+                else {
+                }
+            });
         };
         LoginView.prototype.removeEvents = function () {
             this.back.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.tapBack, this);
@@ -105,4 +109,3 @@ var view;
     view.LoginView = LoginView;
     __reflect(LoginView.prototype, "view.LoginView");
 })(view || (view = {}));
-//# sourceMappingURL=LoginView.js.map

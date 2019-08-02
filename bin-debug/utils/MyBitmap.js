@@ -62,4 +62,3 @@ var utils;
     utils.MyBitmap = MyBitmap;
     __reflect(MyBitmap.prototype, "utils.MyBitmap");
 })(utils || (utils = {}));
-//# sourceMappingURL=MyBitmap.js.map

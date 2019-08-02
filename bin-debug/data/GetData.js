@@ -27,4 +27,3 @@ var GetData = (function () {
     return GetData;
 }());
 __reflect(GetData.prototype, "GetData");
-//# sourceMappingURL=GetData.js.map
